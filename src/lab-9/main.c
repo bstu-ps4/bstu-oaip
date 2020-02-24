@@ -3,6 +3,7 @@
 int main() {
     char str[509];
 
+    printf("Write path:\n");
     gets(str);
 
     char *p;
@@ -12,17 +13,16 @@ int main() {
     char name[509];
 
     while (p) {
-        printf("%s\n", p);
         strcpy(name, p);
         p = strtok(NULL, "\\");
     }
 
-    printf("%s\n\n\n", name);
-
     p = strtok(name, ".");
-    p = strtok(NULL, ".");
 
-    strcpy(name, p);
+    while(p) {
+        strcpy(name, p);
+        p = strtok(NULL, ".");
+    }
 
     printf("%s\n", name);
 
