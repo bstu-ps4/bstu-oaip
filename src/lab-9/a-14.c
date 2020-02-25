@@ -22,6 +22,9 @@ void lab1_a14() {
     else if ( strcmp(type, "jpg") == 0 )
         printf("graphic file");
 
+    else if ( strcmp(type, "gif") == 0 )
+        printf("graphic file");
+
     else if( strcmp(type, "doc") == 0 )
         printf("text file");
 
@@ -37,6 +40,7 @@ char *splitting(char *str, char *ch) {
         strcpy(str, pointer);
         pointer = strtok(NULL, ch);
     }
+    free(ch);
     free(pointer);
     return str;
 }
