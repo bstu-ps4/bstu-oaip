@@ -2,9 +2,15 @@
 #include <stdlib.h>
 #include <string.h>
 
+void lab9_a14();
 char *splitting(char *str, char *ch);
 
-void lab1_a14() {
+int main() {
+    lab9_a14();
+    return 0;
+}
+
+void lab9_a14() {
     char *str = calloc(509, sizeof(char));
     printf("Write path:\n");
     gets(str);
