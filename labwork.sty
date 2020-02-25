@@ -1,0 +1,159 @@
+\usepackage{mathtext}
+%\usepackage[math]{pscyr}
+\usepackage[utf8x]{inputenc}
+\usepackage[russian,english]{babel}
+
+\usepackage{graphicx}
+
+%\documentclass[utf8x,usehyperref]{st-bpi}
+\usepackage[T2A]{fontenc}
+\usepackage{ucs}
+
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\setdefaultlanguage{russian}
+\setmainfont[Mapping=tex-text]{CMU Serif}
+
+\usepackage{listingsutf8}
+
+\righthyphenmin=2
+\frenchspacing
+\usepackage{indentfirst}
+\tolerance=400
+\def\indentpar{12mm} % Отступ красной строки
+\parindent=\indentpar
+\pagestyle{plain}
+
+
+
+
+
+\addto\captionsrussian{\def\figurename{Рисунок}}
+
+% поля документа
+\setlength{\hoffset}{0mm}
+\setlength{\voffset}{-20mm}
+\setlength{\oddsidemargin}{0mm}
+\setlength{\evensidemargin}{-10mm}
+\setlength{\topmargin}{0mm}
+\setlength{\headsep}{10mm}
+\setlength{\textheight}{257mm}
+\setlength{\textwidth}{170mm}
+\setlength{\footskip}{10mm}
+
+% Перечни
+\setlength{\leftmargini}{18mm}
+\newlength{\trimm@parsep}
+\setlength\trimm@parsep{0pt}%9pt plus 3pt minus 5pt} %перед списком
+\def\@listi{\leftmargin\leftmargini
+            \parsep \trimm@parsep
+            \topsep \trimm@parsep
+            \itemsep\trimm@parsep}
+\let\@listI\@listi
+\@listi
+\renewcommand{\labelitemi}{-} % Метка ненумерованного перечня первого уровня
+
+% Заголовки
+\def\nsection{\@startsection
+    {section}{1}{0pt}{-3.5ex plus -1ex minus -.2ex}%
+    {2.3ex plus .2ex}{\footnotesize\raggedright}}
+\let\nsection\section
+
+% Номера страниц
+\renewcommand{\@evenfoot}{\thepage \hfil}
+\renewcommand{\@oddfoot}{\hfil \thepage}
+
+% Русский стиль в библиографии
+\makeatletter
+\def\@biblabel#1{\hfill#1.}
+\makeatother
+
+% Подписи к рисункам и таблицам
+\usepackage{caption}
+\DeclareCaptionLabelSeparator{em-dash}{~--- }
+\captionsetup{
+	labelsep=em-dash,
+	aboveskip=0mm,
+	belowskip=0mm
+}
+\captionsetup[table]{
+	position=top,
+	justification=raggedright,
+	singlelinecheck=false,
+	margin=\indentpar
+}
+
+% Настройки пакетов hyperref и listings
+\usepackage[unicode=true,bookmarks=false]{hyperref}
+\hypersetup{
+  pdftitle={\labtitle},
+  pdfauthor={\labauthor},
+  pdfcreator={\labauthor}
+}
+\usepackage{listings}
+\lstset{
+  extendedchars=true,
+  captionpos=t,
+  showstringspaces=true,
+  frame=lines,
+  xleftmargin=15mm,
+  xrightmargin=15mm,
+  basicstyle=\small,
+  keywordstyle=\textsf,
+  stringstyle=\ttfamily,
+  breaklines=true,
+  breakatwhitespace=true
+}
+\renewcommand{\lstlistingname}{Листинг}
+
+\renewcommand{\maketitle}{%
+  \begin{titlepage}%
+    \begin{center}
+      \Large
+     Министерство образования Республики Беларусь\par
+      Учреждение образования\par
+      <<Брестский государственный технический университет>>\par
+      \vspace{20mm}
+      Кафедра ЭВМиС\par
+      \vspace{40mm}
+      {Лабораторная работа \No \labnumber\par}
+      {<<\labtitle>>\par}
+    \end{center}
+
+    \vfill
+    \hfill
+    \begin{minipage}[t]{70mm}\flushleft
+      Выполнил:\\
+      студент гр.~\group\\
+      \labauthor\\
+      \bigskip
+      Проверил:\\
+      \teacherstatus\\
+      \teacher\\
+    \end{minipage}
+    \vfill
+
+    \begin{center} Брест, \labdate \end{center}
+  \end{titlepage}
+  \stepcounter{page}
+}
+
+% Заголовок
+\newcommand{\labheading}{%
+  \begin{center}%
+  \Large Лабораторная работа \No \labnumber%
+  \end{center}\par%
+  \textit{Тема:}~\labtitle.%
+}
+% Цель работы
+\newenvironment{labgoal}[1]{%
+  \textit{Цель работы:}~#1%
+}{\vspace{1mm}}
+
+% Ход работы
+\newcommand{\labreport}{\begin{center}\textbf{Ход работы}\end{center}}
+
+% Вывод
+\newenvironment{labconclusion}[1]{
+  \textit{Вывод:}~#1
+}{}
