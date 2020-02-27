@@ -25,10 +25,7 @@ void lab9_a14() {
     if ( strcmp(type, "exe") == 0 )
         printf("executable file");
 
-    else if ( strcmp(type, "jpg") == 0 )
-        printf("graphic file");
-
-    else if ( strcmp(type, "gif") == 0 )
+    else if ( strcmp(type, "jpg") == 0 || strcmp(type, "gif") == 0 )
         printf("graphic file");
 
     else if( strcmp(type, "doc") == 0 )
