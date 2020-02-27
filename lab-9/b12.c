@@ -1,6 +1,6 @@
-#include <stdio.h> //gets()
+#include <stdio.h> //gets() printf()
 #include <stdlib.h> //calloc() free()
-#include <string.h> //strtok()
+#include <string.h> //strtok() strcpy() strlen()
 
 void lab9_b12();
 void buble_sort(char*);
