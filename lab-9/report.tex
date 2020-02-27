@@ -55,6 +55,8 @@
 % Метка начала отчета по работе
 \labreport
 
+\section{Task A14}
+
 \begin{conductionA14}
 Условие: Дана строка, содержащая полное имя файла, то есть имя диска, список
 каталогов (путь), собственно имя и расширение. Выделить из этой строки имя
@@ -62,11 +64,17 @@
 исполняемый, «gif», «jpg» - графический, «doc» - текстовый документ и т.д.).
 \end{conductionA14}
 
-
-
 Исходный код программы изображен на листинге \ref{lst:lab9-a14}.
 
+Вывод программы при jpg-файле на рисунке \ref{fig:a14-jpg}.
 
+Вывод программы при doc-файле на рисунке \ref{fig:a14-doc}.
+
+Вывод программы при exe-файле на рисунке \ref{fig:a14-exe}.
+
+Вывод программы при exe-файле на рисунке \ref{fig:a14-gif}.
+
+Вывод программы при exe-файле на рисунке \ref{fig:a14-none}.
 
 \lstinputlisting[
   language=C,
@@ -74,63 +82,111 @@
   label={lst:lab9-a14}
 ]{a14.c}
 
-
-
-Вывод программы при jpg-файле на рисунке \ref{fig:a14-jpg}.
-
 % Вставляем изображение
 \begin{figure}[ht]
   \centering
-  \includegraphics[width=12cm]{imgs/a14jpg.png}
+  \includegraphics[width=16cm]{imgs/a14jpg.png}
   \caption{Task A 14: jpg file}
   \label{fig:a14-jpg}
 \end{figure}
 
-Вывод программы при doc-файле на рисунке \ref{fig:a14-doc}.
-
 % Вставляем изображение
 \begin{figure}[ht]
   \centering
-  \includegraphics[width=12cm]{imgs/a14doc.png}
+  \includegraphics[width=16cm]{imgs/a14doc.png}
   \caption{Task A 14: doc file}
   \label{fig:a14-doc}
 \end{figure}
 
-Вывод программы при exe-файле на рисунке \ref{fig:a14-exe}.
-
 % Вставляем изображение
 \begin{figure}[ht]
   \centering
-  \includegraphics[width=12cm]{imgs/a14exe.png}
+  \includegraphics[width=16cm]{imgs/a14exe.png}
   \caption{Task A 14: exe file}
   \label{fig:a14-exe}
 \end{figure}
 
-Вывод программы при exe-файле на рисунке \ref{fig:a14-gif}.
-
 % Вставляем изображение
 \begin{figure}[ht]
   \centering
-  \includegraphics[width=12cm]{imgs/a14gif.png}
+  \includegraphics[width=16cm]{imgs/a14gif.png}
   \caption{Task A 14: gif file}
   \label{fig:a14-gif}
 \end{figure}
 
-Вывод программы при exe-файле на рисунке \ref{fig:a14-none}.
-
 % Вставляем изображение
 \begin{figure}[ht]
   \centering
-  \includegraphics[width=12cm]{imgs/a14none.png}
+  \includegraphics[width=16cm]{imgs/a14none.png}
   \caption{Task A 14: don't known type}
   \label{fig:a14-none}
 \end{figure}
 
-% Вывод
-\begin{labconclusion}
-Попробовали на практике строки: ввод (gets(str)), вывод (printf("\%s", str)), работь с динамической памятью (calloc(n, sizeof(char)), free(str)), использовать стандартные функции string.h (strtok()).
-\end{labconclusion}
+\clearpage
+
+\section{Task B12}
+
+\begin{conductionB12}
+Условие: Ввести строку, содержащую несколько слов. Выбрать те слова, в
+которых первая буква этого слова встречается еще хоть один раз.
+\end{conductionB12}
+
+Исходный код программы изображен на листинге \ref{lst:lab9-b12}.
+
+Вывод программы на рисунке\ref{fig:a14-none}.
+
+Вывод программы на рисунке\ref{fig:a14-none}.
+
+\lstinputlisting[
+  language=C,
+  caption={Task B 12},
+  label={lst:lab9-b12}
+]{b12.c}
+
+% Вставляем изображение
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=16cm]{imgs/b12-test1.png}
+  \caption{Task B 12: test1}
+  \label{fig:b12-test1}
+\end{figure}
+
+% Вставляем изображение
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=16cm]{imgs/b12-test2.png}
+  \caption{Task B 12: test2}
+  \label{fig:b12-test2}
+\end{figure}
 
 
+
+\clearpage
+
+\section{Вывод}
+
+Попробовали на практике со строками в Си:
+
+Поработали над строками с библиотекой string.h:
+
+\begin{itemize}
+    \item strtok() - разделяли строку на лексемы
+    \item strlen() - узнавали размер строки
+    \item strcpy() - копировали строку в строку
+\end{itemize}
+
+Поработали над строками с библиотекой stdio.h:
+
+\begin{itemize}
+    \item gets() - ввод строки
+    \item printf() - вывод строки
+\end{itemize}
+
+Поработали с динамической памятью с библиотекой stdlib.h:
+
+\begin{itemize}
+    \item calloc() - создавали динамические массивы
+    \item free() - освобождали память
+\end{itemize}
 
 \end{document}
