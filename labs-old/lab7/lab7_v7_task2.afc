@@ -1,0 +1,33 @@
+<!DOCTYPE AFC>
+<algorithm version="1.2">
+  <branch>
+    <io vars="input N, M"/>
+    <for var="i" from="[0" to="N)">
+      <branch>
+        <assign dest="sum" src="0"/>
+        <assign dest="mult" src="1"/>
+        <for var="j" from="[0" to="M)">
+          <branch>
+            <assign dest="a[i, j]" src="random"/>
+            <ou vars="output &quot;a[i, j]&quot;"/>
+            <assign dest="sum" src="sum         + a[i,j]"/>
+            <assign dest="mult" src="mult         * a[i,j]"/>
+          </branch>
+        </for>
+        <ou vars="&quot;sum, mult \n&quot;"/>
+        <assign dest="ba[i]" src="sum"/>
+        <assign dest="bb[i]" src="mult"/>
+      </branch>
+    </for>
+    <for var="i" from="[0" to="N)">
+      <branch>
+        <ou vars="output &quot;ba[i]&quot;"/>
+      </branch>
+    </for>
+    <for var="i" from="[0" to="N)">
+      <branch>
+        <ou vars="output &quot;bb[i]&quot;"/>
+      </branch>
+    </for>
+  </branch>
+</algorithm>

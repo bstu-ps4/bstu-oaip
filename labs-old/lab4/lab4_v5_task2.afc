@@ -1,0 +1,10 @@
+<!DOCTYPE AFC>
+<algorithm version="1.2">
+  <branch>
+    <io vars="input x,y"/>
+    <ou vars="output x + y"/>
+    <ou vars="output x - y"/>
+    <ou vars="output x * y"/>
+    <ou vars="output x / y"/>
+  </branch>
+</algorithm>

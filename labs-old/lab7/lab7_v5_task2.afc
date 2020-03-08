@@ -1,0 +1,62 @@
+<!DOCTYPE AFC>
+<algorithm version="1.2">
+  <branch>
+    <io vars="input m, n, a, b"/>
+    <for var="i" to="m]" from="[1">
+      <branch>
+        <for var="j" to="n]" from="[1">
+          <branch>
+            <assign dest="arr[i  j]" src="random"/>
+          </branch>
+        </for>
+      </branch>
+    </for>
+    <for var="i" to="m]" from="[1">
+      <branch>
+        <assign dest="min" src="arr[i 1]"/>
+        <assign dest="max" src="arr[i  1]"/>
+        <for var="j" to="n]" from="[1">
+          <branch>
+            <if cond="min >   arr[i  j]">
+              <branch>
+                <assign dest="min" src="arr[i  j]"/>
+              </branch>
+              <branch/>
+            </if>
+            <if cond="max &lt;   arr[i  j]">
+              <branch>
+                <assign dest="max" src="arr[i j]"/>
+              </branch>
+              <branch/>
+            </if>
+            <ou vars="out &quot;arr[i j]| &quot;"/>
+          </branch>
+        </for>
+        <ou vars="o &quot;min max\n&quot;"/>
+      </branch>
+    </for>
+    <for var="j" to="n]" from="[1">
+      <branch>
+        <assign dest="min" src="arr[1, j]"/>
+        <assign dest="max" src="arr[1, j]"/>
+        <for var="i" to="m]" from="[1">
+          <branch>
+            <if cond="min >   arr[i, j]">
+              <branch>
+                <assign dest="min" src="arr[i, j]"/>
+              </branch>
+              <branch/>
+            </if>
+            <if cond="max &lt;  arr[i, j]">
+              <branch>
+                <assign dest="max" src="arr[i, j]"/>
+              </branch>
+              <branch/>
+            </if>
+          </branch>
+        </for>
+        <ou vars="o &quot;min max| &quot;"/>
+      </branch>
+    </for>
+  </branch>
+</algorithm>

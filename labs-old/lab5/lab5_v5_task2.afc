@@ -1,0 +1,77 @@
+<!DOCTYPE AFC>
+<algorithm version="1.2">
+  <branch>
+    <io vars="input e"/>
+    <if cond="x = 0">
+      <branch>
+        <ou vars="output char(e)"/>
+      </branch>
+      <branch>
+        <if cond="x = 1">
+          <branch>
+            <ou vars="output char(e)"/>
+          </branch>
+          <branch>
+            <if cond="x = 2">
+              <branch>
+                <ou vars="output char(e)"/>
+              </branch>
+              <branch>
+                <if cond="x = 3">
+                  <branch>
+                    <ou vars="output char(e)"/>
+                  </branch>
+                  <branch>
+                    <if cond="x = 4">
+                      <branch>
+                        <ou vars="output char(e)"/>
+                      </branch>
+                      <branch>
+                        <if cond="x = 5">
+                          <branch>
+                            <ou vars="output char(e)"/>
+                          </branch>
+                          <branch>
+                            <if cond="x = 6">
+                              <branch>
+                                <ou vars="output char(e)"/>
+                              </branch>
+                              <branch>
+                                <if cond="x = 7">
+                                  <branch>
+                                    <ou vars="output char(e)"/>
+                                  </branch>
+                                  <branch>
+                                    <if cond="x = 8">
+                                      <branch>
+                                        <ou vars="output char(e)"/>
+                                      </branch>
+                                      <branch>
+                                        <if cond="x = 9">
+                                          <branch>
+                                            <ou vars="output char(e)"/>
+                                          </branch>
+                                          <branch>
+                                            <ou vars="output Err"/>
+                                          </branch>
+                                        </if>
+                                      </branch>
+                                    </if>
+                                  </branch>
+                                </if>
+                              </branch>
+                            </if>
+                          </branch>
+                        </if>
+                      </branch>
+                    </if>
+                  </branch>
+                </if>
+              </branch>
+            </if>
+          </branch>
+        </if>
+      </branch>
+    </if>
+  </branch>
+</algorithm>

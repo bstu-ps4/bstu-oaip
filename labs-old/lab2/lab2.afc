@@ -1,0 +1,22 @@
+<!DOCTYPE AFC>
+<algorithm version="1.2">
+  <branch>
+    <io vars="x0,y0,r0,x1,x2"/>
+    <assign dest="r1" src="√( (x1 - x0)² + (y1 - y0)² )"/>
+    <if cond="r0 > r1">
+      <branch>
+        <ou vars="&quot;point in circle&quot;"/>
+      </branch>
+      <branch>
+        <if cond="r0 &lt; r1">
+          <branch>
+            <ou vars="point out of circle"/>
+          </branch>
+          <branch>
+            <ou vars="point on circle"/>
+          </branch>
+        </if>
+      </branch>
+    </if>
+  </branch>
+</algorithm>

@@ -1,0 +1,20 @@
+<!DOCTYPE AFC>
+<algorithm version="1.2">
+  <branch>
+    <if cond="x > 0">
+      <branch>
+        <ou vars="o &quot;is pos numb&quot;"/>
+      </branch>
+      <branch>
+        <if cond="x = 0">
+          <branch>
+            <ou vars="output &quot;is zero&quot;"/>
+          </branch>
+          <branch>
+            <ou vars="o &quot;is neg numb&quot;"/>
+          </branch>
+        </if>
+      </branch>
+    </if>
+  </branch>
+</algorithm>

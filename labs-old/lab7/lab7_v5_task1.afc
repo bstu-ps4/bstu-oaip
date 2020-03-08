@@ -1,0 +1,26 @@
+<!DOCTYPE AFC>
+<algorithm version="1.2">
+  <branch>
+    <io vars="input N"/>
+    <if cond="N ⋮ 3">
+      <branch>
+        <ou vars="&quot;b[] build&quot;"/>
+        <for to="N)" var="i" from="[0">
+          <branch>
+            <io vars="input a[i]"/>
+          </branch>
+        </for>
+        <for to="N)" var="i" from="[0">
+          <branch>
+            <assign dest="b[i]" src="a[i] +        + a[i+1] + a[i+2]"/>
+            <ou vars="output &quot;b[i]&quot;"/>
+            <assign dest="i" src="i + 3"/>
+          </branch>
+        </for>
+      </branch>
+      <branch>
+        <ou vars="&quot;b[] can't build&quot;"/>
+      </branch>
+    </if>
+  </branch>
+</algorithm>

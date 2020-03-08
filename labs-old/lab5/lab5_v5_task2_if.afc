@@ -1,0 +1,14 @@
+<!DOCTYPE AFC>
+<algorithm version="1.2">
+  <branch>
+    <io vars="input e"/>
+    <if cond="x >= 0  x &lt;= 9">
+      <branch>
+        <ou vars="output char(e)"/>
+      </branch>
+      <branch>
+        <ou vars="output Err"/>
+      </branch>
+    </if>
+  </branch>
+</algorithm>

@@ -1,0 +1,102 @@
+<!DOCTYPE AFC>
+<algorithm version="1.2">
+  <branch>
+    <io vars="input n, m"/>
+    <for to="n)" from="[0" var="i">
+      <branch>
+        <for to="m)" from="[0" var="j">
+          <branch>
+            <assign src="random" dest="arr[i j]"/>
+            <ou vars="outp &quot;arr[i j] &quot;"/>
+          </branch>
+        </for>
+        <ou vars="output &quot;\n&quot;"/>
+      </branch>
+    </for>
+    <for to="n)" from="[0" var="i">
+      <branch>
+        <assign src="arr[i 0]" dest="min"/>
+        <assign src="arr[i 0]" dest="max"/>
+        <for to="m)" from="[0" var="j">
+          <branch>
+            <if cond="arr[i j] &lt; min">
+              <branch>
+                <assign src="arr[i j]" dest="min"/>
+              </branch>
+              <branch/>
+            </if>
+            <if cond="arr[i j] > max">
+              <branch>
+                <assign src="arr[i, j]" dest="max"/>
+              </branch>
+              <branch/>
+            </if>
+            <ou vars="outp &quot;arr[i j] &quot;"/>
+          </branch>
+        </for>
+        <ou vars="&quot;min, max \n&quot;"/>
+      </branch>
+    </for>
+    <for to="n)" from="[0" var="j">
+      <branch>
+        <assign src="arr[0 j]" dest="min"/>
+        <assign src="arr[0 j]" dest="max"/>
+        <for to="n)" from="[0" var="i">
+          <branch>
+            <if cond="arr[i j] &lt; min">
+              <branch>
+                <assign src="arr[i j]" dest="min"/>
+              </branch>
+              <branch/>
+            </if>
+            <if cond="arr[i j] > max">
+              <branch>
+                <assign src="arr[i j]" dest="max"/>
+              </branch>
+              <branch/>
+            </if>
+          </branch>
+        </for>
+        <ou vars="out &quot;min max&quot;"/>
+      </branch>
+    </for>
+    <assign src="n + 1" dest="e"/>
+    <pre cond="e > n">
+      <branch>
+        <io vars="input e"/>
+      </branch>
+    </pre>
+    <for to="m)" from="[0" var="j">
+      <branch>
+        <io vars="input arrRow[j]"/>
+      </branch>
+    </for>
+    <for to="n)" from="[0" var="i">
+      <branch>
+        <if cond="i = e">
+          <branch>
+            <for to="m)" from="[0" var="j">
+              <branch>
+                <ou vars="o &quot;arrRow[j] &quot;"/>
+              </branch>
+            </for>
+            <ou vars="output &quot;\n&quot;"/>
+            <for to="m)" from="[0" var="j">
+              <branch>
+                <ou vars="outp &quot;arr[i j] &quot;"/>
+              </branch>
+            </for>
+          </branch>
+          <branch>
+            <for to="m)" from="[0" var="j">
+              <branch>
+                <ou vars="outp &quot;arr[i j] &quot;"/>
+              </branch>
+            </for>
+          </branch>
+        </if>
+        <ou vars="output &quot;\n&quot;"/>
+      </branch>
+    </for>
+  </branch>
+</algorithm>

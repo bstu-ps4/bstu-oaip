@@ -1,0 +1,36 @@
+<!DOCTYPE AFC>
+<algorithm version="1.2">
+  <branch>
+    <assign dest="n" src="4"/>
+    <pre cond="n not :. 3">
+      <branch>
+        <io vars="input n"/>
+      </branch>
+    </pre>
+    <for var="i" from="[0" to="n)">
+      <branch>
+        <io vars="input a[i]"/>
+        <assign dest="i" src="i + 1"/>
+      </branch>
+    </for>
+    <for var="i" from="[0" to="n)">
+      <branch>
+        <assign dest="b[k]" src="a[i] +       a[i + 1] + a[i + 2]"/>
+        <assign dest="i" src="i + 3"/>
+        <assign dest="k" src="k + 1"/>
+      </branch>
+    </for>
+    <io vars="input e"/>
+    <for var="i" from="[0" to="n/3)">
+      <branch>
+        <if cond="b[i]       &lt;> e">
+          <branch>
+            <ou vars="output &quot;b[i]&quot;"/>
+          </branch>
+          <branch/>
+        </if>
+        <assign dest="i" src="i + 1"/>
+      </branch>
+    </for>
+  </branch>
+</algorithm>

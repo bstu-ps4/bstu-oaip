@@ -1,0 +1,19 @@
+<!DOCTYPE AFC>
+<algorithm version="1.2">
+  <branch>
+    <io vars="input x,y,z"/>
+    <assign src="|x|" dest="a"/>
+    <assign src="a^1/2" dest="b"/>
+    <assign src="- b" dest="c"/>
+    <assign src="y^c" dest="d"/>
+    <assign src="ln(d)" dest="e"/>
+    <assign src="y / 2" dest="f"/>
+    <assign src="x - f" dest="g"/>
+    <assign src="e * g" dest="h"/>
+    <assign src="arctg(z)" dest="i"/>
+    <assign src="sin(i)" dest="j"/>
+    <assign src="j^2" dest="k"/>
+    <assign src="h + k" dest="l"/>
+    <ou vars="output l"/>
+  </branch>
+</algorithm>
