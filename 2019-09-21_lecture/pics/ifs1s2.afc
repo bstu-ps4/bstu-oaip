@@ -1,0 +1,13 @@
+<!DOCTYPE AFC>
+<algorithm version="1.2">
+  <branch>
+    <if cond="P">
+      <branch>
+        <process text="S1"/>
+      </branch>
+      <branch>
+        <process text="S2"/>
+      </branch>
+    </if>
+  </branch>
+</algorithm>

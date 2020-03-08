@@ -1,0 +1,10 @@
+<!DOCTYPE AFC>
+<algorithm version="1.2">
+  <branch>
+    <pre cond="P">
+      <branch>
+        <process text="S"/>
+      </branch>
+    </pre>
+  </branch>
+</algorithm>

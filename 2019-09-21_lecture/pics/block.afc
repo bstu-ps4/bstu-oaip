@@ -1,0 +1,10 @@
+<!DOCTYPE AFC>
+<algorithm version="1.2">
+  <branch>
+    <io vars="Ввод x, m"/>
+    <assign src="√(x²+m²)" dest="a"/>
+    <assign src="tg²(x)" dest="b"/>
+    <assign src="b / a + c * a" dest="z"/>
+    <ou vars="Вывод x,m,a"/>
+  </branch>
+</algorithm>
