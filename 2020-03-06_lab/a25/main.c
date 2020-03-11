@@ -4,23 +4,19 @@
 void lab();
 void Transp(int**, int);
 
-int main(int argc, char *argv[])
-{
+int main() {
 	lab();
 }
 
 void lab() {
-
 	int n;
 	printf("n := ");
 	scanf("%d", &n);
-
 
 	int** a = (int**) calloc(n, sizeof(int*));
 	for  (int i = 0; i < n; i++) {
 		a[i] = (int*) calloc(n, sizeof(int));
 	}
-
 
 	for (int i = 0; i < n; i++) {
 		for (int j = 0; j < n; j++) {
@@ -30,9 +26,7 @@ void lab() {
 		printf("\n");
 	}
 
-
 	Transp(a, n);
-
 
 	printf("\n\nTransported matrix:\n");
 	for (int i = 0; i < n; i++) {
@@ -42,6 +36,10 @@ void lab() {
 		printf("\n");
 	}
 
+	for (int i = 0; i < n; i++) {
+        free(a[i]);
+	}
+    free(a);
 }
 
 void Transp(int** A, int M) {
