@@ -7,7 +7,7 @@ char* InvertStr(char*, int, int);
 int main() {
 	char* s = (char*) calloc(509, sizeof(char));
 	printf("Write string:\n");
-	scanf("%s", s);
+	gets(s);
 
 	int k;
 	printf("k := ");
