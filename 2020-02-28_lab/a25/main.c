@@ -1,14 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void lab();
 void Transp(int**, int);
 
 int main() {
-	lab();
-}
-
-void lab() {
 	int n;
 	printf("n := ");
 	scanf("%d", &n);
@@ -28,7 +23,7 @@ void lab() {
 
 	Transp(a, n);
 
-	printf("\n\nTransported matrix:\n");
+	printf("\nTransported matrix:\n");
 	for (int i = 0; i < n; i++) {
 		for (int j = 0; j < n; j++) {
 			printf("%2d", a[i][j]);
@@ -40,6 +35,7 @@ void lab() {
         free(a[i]);
 	}
     free(a);
+    return 0;
 }
 
 void Transp(int** A, int M) {
