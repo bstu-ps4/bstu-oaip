@@ -2,14 +2,9 @@
 #include <stdlib.h>
 #include <string.h>
 
-void lab();
 char* InvertStr(char*, int, int);
 
 int main() {
-	lab();
-}
-
-void lab() {
 	char* s = (char*) calloc(509, sizeof(char));
 	printf("Write string:\n");
 	scanf("%s", s);
