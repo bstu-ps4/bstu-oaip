@@ -31,6 +31,12 @@ void lab()
     SortCols(a, N, M);
     cout << endl << "sorted cols" << endl << endl;
     printfMatrix(a, N, M);
+
+    for (int i = 0; i < N; i++)
+    {
+        delete [] a[i];
+    }
+    delete [] a;
 }
 
 void generateMatrix(int** arr, int rows, int cols, int a, int b)
