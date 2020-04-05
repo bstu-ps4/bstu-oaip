@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <windows.h>
 
 struct structure_for_car
 {
@@ -10,7 +9,7 @@ struct structure_for_car
     int osmotr;
 };
 
-void enconding();
+void clearConsole();
 void lab();
 void menu(int, struct structure_for_car* cars_data);
 void outToMenu();
@@ -25,10 +24,9 @@ int main()
     return 0;
 }
 
-void enconding()
+void clearConsole()
 {
-    SetConsoleCP(1251);
-    SetConsoleOutputCP(1251);
+    printf("\033[2J\033[1;1H");
 }
 
 void lab()
@@ -42,15 +40,14 @@ void lab()
 
 void menu(int ID, struct structure_for_car* cars_data)
 {
-    enconding();
-    system("cls");
+    clearConsole();
 
-    printf("Меню:\n");
-    printf("0. Выйти из программы\n");
-    printf("1. Ввод данных\n");
-    printf("2. Вывод данных\n");
-    printf("3. Сортирова по полю\n");
-    printf("4. Удалить запись\n");
+    printf("РњРµРЅСЋ:\n");
+    printf("0. Р’С‹Р№С‚Рё РёР· РїСЂРѕРіСЂР°РјРјС‹\n");
+    printf("1. Р’РІРѕРґ РґР°РЅРЅС‹С…\n");
+    printf("2. Р’С‹РІРѕРґ РґР°РЅРЅС‹С…\n");
+    printf("3. РЎРѕСЂС‚РёСЂРѕРІР° РїРѕ РїРѕР»СЋ\n");
+    printf("4. РЈРґР°Р»РёС‚СЊ Р·Р°РїРёСЃСЊ\n");
 
     int choosen_menu_case;
     scanf("%d", &choosen_menu_case);
@@ -79,7 +76,7 @@ void menu(int ID, struct structure_for_car* cars_data)
 void outToMenu(int ID, struct structure_for_car* cars_data)
 {
     printf("\n");
-    printf("0. Выйти в главное меню\n");
+    printf("0. Р’С‹Р№С‚Рё РІ РіР»Р°РІРЅРѕРµ РјРµРЅСЋ\n");
     int choosenCase;
     scanf("%d", &choosenCase);
 
@@ -95,28 +92,28 @@ void outToMenu(int ID, struct structure_for_car* cars_data)
 
 void input_data(int ID, struct structure_for_car* cars_data)
 {
-    system("cls");
+    clearConsole();
 
     ID++;
     cars_data = (struct structure_for_car*) realloc(cars_data, ID * sizeof(struct structure_for_car));
 
 
-    printf("Номер машины: ");
+    printf("РќРѕРјРµСЂ РјР°С€РёРЅС‹: ");
     scanf("%s", cars_data[ID - 1].number);
 
 
-    printf("Марка машины: ");
+    printf("РњР°СЂРєР° РјР°С€РёРЅС‹: ");
     scanf("%s", cars_data[ID - 1].mark);
 
 
-    printf("Фамилия владельца: ");
+    printf("Р¤Р°РјРёР»РёСЏ РІР»Р°РґРµР»СЊС†Р°: ");
     scanf("%s", cars_data[ID - 1].surname);
 
 
     int osmotr = 2;
     while (!(osmotr == 0 || osmotr == 1))
     {
-        printf("Осмотр: ");
+        printf("РћСЃРјРѕС‚СЂ: ");
         scanf("%d", &osmotr);
     }
     cars_data[ID - 1].osmotr = osmotr;
@@ -126,14 +123,15 @@ void input_data(int ID, struct structure_for_car* cars_data)
 
 void out_data(int ID, struct structure_for_car* cars_data)
 {
-    system("cls");
+    clearConsole();
+
     printf(
         "%4s\t%10s\t%10s\t%20s\t%s\n",
         "ID",
-        "Номер",
-        "Марка",
-        "Фамилия",
-        "Осмотр"
+        "РќРѕРјРµСЂ",
+        "РњР°СЂРєР°",
+        "Р¤Р°РјРёР»РёСЏ",
+        "РћСЃРјРѕС‚СЂ"
     );
     for (int i = 0; i < ID; i++)
     {
@@ -143,7 +141,7 @@ void out_data(int ID, struct structure_for_car* cars_data)
             cars_data[i].number,
             cars_data[i].mark,
             cars_data[i].surname,
-            cars_data[i].osmotr == 1? "Пройден": "Не пройден"
+            cars_data[i].osmotr == 1? "РџСЂРѕР№РґРµРЅ": "РќРµ РїСЂРѕР№РґРµРЅ"
         );
     }
     outToMenu(ID, cars_data);
@@ -151,14 +149,14 @@ void out_data(int ID, struct structure_for_car* cars_data)
 
 void sort_data(int ID, struct structure_for_car* cars_data)
 {
-    system("cls");
+    clearConsole();
 
     outToMenu(ID, cars_data);
 }
 
 void del_data(int ID, struct structure_for_car* cars_data)
 {
-    system("cls");
+    clearConsole();
 
     outToMenu(ID, cars_data);
 }
