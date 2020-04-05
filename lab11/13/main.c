@@ -43,11 +43,11 @@ void menu(int ID, struct structure_for_car* cars_data)
     clearConsole();
 
     printf("Меню:\n");
-    printf("0. Выйти из программы\n");
     printf("1. Ввод данных\n");
     printf("2. Вывод данных\n");
     printf("3. Сортирова по полю\n");
     printf("4. Удалить запись\n");
+    printf("0. Выйти из программы\n");
 
     int choosen_menu_case;
     scanf("%d", &choosen_menu_case);
@@ -125,18 +125,19 @@ void out_data(int ID, struct structure_for_car* cars_data)
 {
     clearConsole();
 
-    printf(
-        "%4s\t%10s\t%10s\t%20s\t%s\n",
+    /*printf(
+        "%-8s|%-20s|%-20s|%-20s|%-20s\n",
         "ID",
         "Номер",
         "Марка",
         "Фамилия",
         "Осмотр"
-    );
+    );*/
+    printf("ID      | Номер               | Марка               | Фамилия             | Осмотр\n");
     for (int i = 0; i < ID; i++)
     {
         printf(
-            "%4d\t%10s\t%10s\t%20s\t%s\n",
+            "%-8d| %-20s| %-20s| %-20s| %-20s\n",
             i,
             cars_data[i].number,
             cars_data[i].mark,
