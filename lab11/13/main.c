@@ -1,32 +1,29 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "clearConsole.c"
+#include "encoding.c"
 
 struct structure_for_car
 {
-    char* number[10];
-    char* mark[10];
-    char* surname[20];
+    char number[10];
+    char mark[10];
+    char surname[20];
     int osmotr;
 };
 
-void clearConsole();
 void lab();
 void menu(int, struct structure_for_car* cars_data);
-void outToMenu();
-void input_data();
-void out_data();
-void sort_data();
-void del_data();
+void outToMenu(int, struct structure_for_car* cars_data);
+void input_data(int, struct structure_for_car* cars_data);
+void out_data(int, struct structure_for_car* cars_data);
+void sort_data(int, struct structure_for_car* cars_data);
+void del_data(int, struct structure_for_car* cars_data);
 
 int main()
 {
+    encoding();
     lab();
     return 0;
-}
-
-void clearConsole()
-{
-    printf("\033[2J\033[1;1H");
 }
 
 void lab()
@@ -125,25 +122,21 @@ void out_data(int ID, struct structure_for_car* cars_data)
 {
     clearConsole();
 
-    /*printf(
-        "%-8s|%-20s|%-20s|%-20s|%-20s\n",
-        "ID",
-        "Номер",
-        "Марка",
-        "Фамилия",
-        "Осмотр"
-    );*/
-    printf("ID      | Номер               | Марка               | Фамилия             | Осмотр\n");
+    printf("ID  ");                 //printf("%-4s", "ID");
+    printf("Номер     ");           //printf("%-10s","Номер");
+    printf("Марка     ");           //printf("%-10s", "Марка");
+    printf("Фамилия             "); //printf("%-20s", "Фамилия");
+    printf("Осмотр    ");           //printf("%-10s", "Осмотр");
+    printf("\n");
+
     for (int i = 0; i < ID; i++)
     {
-        printf(
-            "%-8d| %-20s| %-20s| %-20s| %-20s\n",
-            i,
-            cars_data[i].number,
-            cars_data[i].mark,
-            cars_data[i].surname,
-            cars_data[i].osmotr == 1? "Пройден": "Не пройден"
-        );
+        printf("%-4d", i);
+        printf("%-10s", cars_data[i].number);
+        printf("%-10s", cars_data[i].mark);
+        printf("%-20s", cars_data[i].surname);
+        printf("%-10s", (cars_data[i].osmotr == 1? "Пройден": "Не пройден"));
+        printf("\n");
     }
     outToMenu(ID, cars_data);
 }
