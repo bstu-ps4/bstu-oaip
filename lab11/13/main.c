@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "clearConsole.c"
-#include "encoding.c"
+#include "clearConsole.h"
+#include "encoding.h"
 
 struct structure_for_car
 {
