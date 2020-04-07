@@ -1,4 +1,4 @@
-#include "lab.h"
+#include "inc/lab.h"
 
 void lab()
 {
