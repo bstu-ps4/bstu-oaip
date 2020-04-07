@@ -1,4 +1,4 @@
-#include "inc/encoding.h"
+#include "../inc/encoding.h"
 
 void encoding()
 {

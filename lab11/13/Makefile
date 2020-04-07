@@ -1,14 +1,14 @@
-lab.o: lab.c
-	gcc -c lab.c
+lab.o: src/lab.c
+	gcc -c src/lab.c
 
-clearConsole.o: clearConsole.c
-	gcc -c clearConsole.c
+clearConsole.o: src/clearConsole.c
+	gcc -c src/clearConsole.c
 
-encoding.o: encoding.c
-	gcc -c encoding.c
+encoding.o: src/encoding.c
+	gcc -c src/encoding.c
 
-main.o: main.c
-	gcc -c main.c
+main.o: src/main.c
+	gcc -c src/main.c
 
 clean:
 	rm -rf *.o App
