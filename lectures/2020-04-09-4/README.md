@@ -238,7 +238,7 @@ pos файла f, возвращает 0 при успешном заверше�
     int i, j, kodR, size = sizeof(Sved);
     while(1) {
         puts("Создание - 1\nПросмотр - 2\nДобавление - 0");
-        switch(kodR = gatch())
+        switch(kodR = getch())
         {
             case '1': case '3':
                 if(kodR == 1)
