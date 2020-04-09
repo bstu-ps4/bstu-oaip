@@ -1,0 +1,33 @@
+\subsection{Доступ к полям структуры}
+
+Доступ к отдельным полям структуры осущeствляется с помощью оператора точка (\texttt{.}).
+
+Стандартный вид доступа:
+
+\begin{verbatim}
+имя_структуры.имя_поля
+\end{verbatim}
+
+Примеры: 
+\begin{itemize}
+\item присваиваем полю \texttt{zip} структурной переменной \texttt{addr\_info} значение \texttt{12345}: 
+    \begin{verbatim}
+addr_info.zip = 12345;
+    \end{verbatim}
+
+\item выводим поле \texttt{zip} на экран: 
+    \begin{verbatim}
+printf ("%ld", addr_info.zip);
+    \end{verbatim}
+
+    Эта строка выводит на экран структурное поле \texttt{zip}.
+
+\item передаем указатель на символ, указывающий на начало name: 
+    \begin{verbatim}
+gets (addr_info.name);
+    \end{verbatim}
+  
+    Использует массив символом \texttt{addr.name}.
+  
+    Эта команда передаёт символ указывающий на начало \texttt{name}.
+\end{itemize}

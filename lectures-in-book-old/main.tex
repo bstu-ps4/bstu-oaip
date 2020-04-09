@@ -1,0 +1,31 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{src/encoding} % кодировка
+\usepackage{src/titlePage} % титульный лист
+\usepackage{src/fields} % поля
+\usepackage{src/imgs} % картинки
+
+\begin{document}
+
+% титульный лист
+\maketitle
+\setcounter{page}{2}
+
+%
+.
+\newpage
+
+% содержание
+\renewcommand{\contentsname}{Содержание}
+\tableofcontents
+\newpage
+
+% контент
+\input{src/2020-02-13/index.tex}
+\newpage
+\input{src/2020-02-27/index.tex}
+\newpage
+\input{src/2020-03-12/index.tex}
+\newpage
+
+\end{document}

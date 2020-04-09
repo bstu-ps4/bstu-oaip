@@ -1,0 +1,29 @@
+\subsection{Массивы и структуры в структурах}
+
+\underline{Поле структуры} может быть как \underline{простым}, так и \underline{составным}.
+
+\begin{itemize}
+\item \underline{Простое поле} – обычный базовый тип данных.
+\item \underline{Составные типы} являются одномерными или многомерными массивами различных типов данных и структур.
+\end{itemize}
+
+\begin{verbatim}
+struct x { 
+    int a[10][10];
+    float b;
+} y;
+
+y.a[3][7]
+\end{verbatim}
+
+Структура \texttt{addr} вложена в структуру \texttt{emp}:
+
+\begin{verbatim}
+struct emp { 
+    sruct addr address;
+    float wage;
+} worker;
+
+worker.wage = 35000.00;
+worker.address.zip = 98765;
+\end{verbatim}

@@ -1,0 +1,39 @@
+\subsection{Использование перечислений типа для обращения к полям объекта}
+
+\begin{verbatim}
+int main() {
+    enum paytype{CARD, CHECK}; /* две формы оплаты с числовыми значениями 0, 1 */
+    paytype ptype; /* определение переменной перечисления типа */
+    union {
+        char card[25];
+        long check;
+    } info;
+\end{verbatim}
+
+Эту форма характеризует плату наличкой или карточкой.
+
+Возможно присваение значения объединению:
+
+\begin{verbatim}
+    p type = CARD; /* переменная флаг получает значение CARD(0) */
+    strcpy(info.card, "12345"); /* объединение получает своё значение через none
+card или */
+    p type = pay type(1); /* переменная флаг получает значение CHECH(1) */
+    info.check = 105l; /* объединение получает своЁ значение через поле check */
+\end{verbatim}
+
+Вывод значения переменной:
+
+\begin{verbatim}
+    switch(ptype) {
+        case CARD:
+            cout << "card: " << info.card << endl;
+            break;
+        case CHECH:
+            cout << "check: " << info.check << endl;
+            break;
+    }
+    _getch();
+    return 0;
+}
+\end{verbatim}
