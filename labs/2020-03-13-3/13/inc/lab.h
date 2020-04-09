@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "clearConsole.h"
+#include "getch.h"
 
 struct structure_for_car
 {

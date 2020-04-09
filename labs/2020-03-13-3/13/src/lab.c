@@ -20,23 +20,21 @@ void menu(int ID, struct structure_for_car* cars_data)
     printf("4. Удалить запись\n");
     printf("0. Выйти из программы\n");
 
-    int choosen_menu_case;
-    scanf("%d", &choosen_menu_case);
-
-    switch(choosen_menu_case)
+    int choosen_case;
+    switch(choosen_case = getch())
     {
-        case 0:
+        case '0':
             break;
-        case 1:
+        case '1':
             input_data(ID, cars_data);
             break;
-        case 2:
+        case '2':
             out_data(ID, cars_data);
             break;
-        case 3:
+        case '3':
             sort_data(ID, cars_data);
             break;
-        case 4:
+        case '4':
             del_data(ID, cars_data);
             break;
         default:
@@ -48,12 +46,11 @@ void outToMenu(int ID, struct structure_for_car* cars_data)
 {
     printf("\n");
     printf("0. Выйти в главное меню\n");
-    int choosenCase;
-    scanf("%d", &choosenCase);
 
-    switch(choosenCase)
+    int choosen_case;
+    switch(choosen_case = getch())
     {
-        case 0:
+        case '0':
             menu(ID, cars_data);
             break;
         default:
