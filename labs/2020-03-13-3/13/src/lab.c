@@ -79,10 +79,10 @@ void input_data(int ID, struct structure_for_car* cars_data)
 
 
     int osmotr = 2;
-    while (!(osmotr == 0 || osmotr == 1))
+    printf("Осмотр: ");
+    while (!(osmotr == '0' || osmotr == '1'))
     {
-        printf("Осмотр: ");
-        scanf("%d", &osmotr);
+        osmotr = getch();
     }
     cars_data[ID - 1].osmotr = osmotr;
 
@@ -106,7 +106,7 @@ void out_data(int ID, struct structure_for_car* cars_data)
         printf("%-10s", cars_data[i].number);
         printf("%-10s", cars_data[i].mark);
         printf("%-20s", cars_data[i].surname);
-        printf("%-10s", (cars_data[i].osmotr == 1? "Пройден": "Не пройден"));
+        printf("%-10s", (cars_data[i].osmotr == '1'? "Пройден": "Не пройден"));
         printf("\n");
     }
     outToMenu(ID, cars_data);
