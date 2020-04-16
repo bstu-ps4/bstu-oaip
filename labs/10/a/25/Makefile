@@ -2,9 +2,11 @@ APP_name = App
 CC = gcc
 
 # root folder - - - - - - - - - -
+SRC_root += generate_matrix.c
 SRC_root += lab.c
 SRC_root += main.c
-SRC_root += TranspMatrix.c
+SRC_root += print_matrix.c
+SRC_root += transp_matrix.c
 # end root folder - - - - - - - - - -
 
 SOURCES = $(SRC_root)

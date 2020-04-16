@@ -6,37 +6,23 @@ void lab()
     printf("Размер квадратной матрицы: ");
     scanf("%d", &n);
 
-    int** a = (int**) calloc(n, sizeof(int*));
+    int** arr = (int**) calloc(n, sizeof(int*));
     for  (int i = 0; i < n; i++)
     {
-        a[i] = (int*) calloc(n, sizeof(int));
+        arr[i] = (int*) calloc(n, sizeof(int));
     }
 
-    for (int i = 0; i < n; i++)
-    {
-        for (int j = 0; j < n; j++)
-        {
-            a[i][j] = rand() % 9 + 1;
-            printf("%d\t", a[i][j]);
-        }
-        printf("\n");
-    }
+    generate_matrix(arr, n, n, 1, 9);
+    print_matrix(arr, n, n);
 
-    Transp(a, n);
+    transp_matrix(arr, n);
 
     printf("\nТранспонированная матрица:\n");
-    for (int i = 0; i < n; i++)
-    {
-        for (int j = 0; j < n; j++)
-        {
-            printf("%d\t", a[i][j]);
-        }
-        printf("\n");
-    }
+    print_matrix(arr, n, n);
 
     for (int i = 0; i < n; i++)
     {
-        free(a[i]);
+        free(arr[i]);
     }
-    free(a);
+    free(arr);
 }

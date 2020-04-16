@@ -1,15 +1,16 @@
-#include "../inc/TranspMatrix.h"
+#include "../inc/transp_matrix.h"
 
-void Transp(int** A, int M)
+void transp_matrix(int** A, int M)
 {
     int k = 0;
     for (int i = 0; i < M - 1; i++)
     {
-        for (int j = k; j < M; j++) {
+        for (int j = k; j < M; j++)
+        {
             int temp = A[i][j];
             A[i][j] = A[j][i];
             A[j][i] = temp;
-		}
-		k++;
-	}
+        }
+        k++;
+    }
 }
