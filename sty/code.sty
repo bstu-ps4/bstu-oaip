@@ -1,0 +1,25 @@
+\usepackage{listings}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{listingsutf8}
+\usepackage{pmboxdraw} % UTF-8 в verbatim
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{   % string literal style
+    inputencoding=utf8,
+    extendedchars=\true,
+    breaklines=true, % автоматический перенос строк
+    tabsize=2, % таб = 2 пробел
+    captionpos=t, % где находится подпись листинга
+    numbers=left, % где нумерация строк
+    showtabs=2, % показывать табы
+    frame=single, % рамка
+    showspaces=false, % показывать пробелы
+    title=Листинг: \lstname, % показывать название
+    showstringspaces=true, % показывать пробелы в строках
+    keywordstyle=\color{blue}, % Стиль ключевых слов
+    commentstyle=\color{dkgreen}, % Стиль комментариев
+    stringstyle=\color{mauve} % Стиль литералов  
+}

@@ -1,0 +1,25 @@
+% Заголовок
+\newcommand{\labheading}{
+	\begin{center}
+		\textbf{Лабораторная работа №\numberOfLab}
+	\end{center}
+	
+	\textbf{Тема:} \labTitle.
+}
+
+% Цель работы
+\newenvironment{labgoal}[1]{%
+  \textbf{Цель работы:}~#1%
+}
+
+% Ход работы
+\newcommand{\labreport}{
+	\begin{center}
+		\textbf{Ход работы:}
+	\end{center}
+}
+
+% Вывод
+\newenvironment{labconclusion}[1]{
+	\textbf{Вывод:}~#1
+}{}

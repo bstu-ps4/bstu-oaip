@@ -1,7 +1,15 @@
+# Source code
 *.exe
 *.out
 *.o
-main
 App
 
+# Latex
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
 *.pdf
+*.synctex(busy)
+*.synctex.gz
+*.toc
