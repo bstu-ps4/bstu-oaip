@@ -3,6 +3,7 @@ CC = gcc
 
 # root folder - - - - - - - - - -
 SRC_root += generate_matrix.c
+SRC_root += integer_swap.c
 SRC_root += lab.c
 SRC_root += main.c
 SRC_root += print_matrix.c

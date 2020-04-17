@@ -1,15 +1,13 @@
 #include "../inc/transp_matrix.h"
 
-void transp_matrix(int** A, int M)
+void transp_matrix(int** arr, int rows)
 {
     int k = 0;
-    for (int i = 0; i < M - 1; i++)
+    for (int i = 0; i < rows - 1; i++)
     {
-        for (int j = k; j < M; j++)
+        for (int j = k; j < rows; j++)
         {
-            int temp = A[i][j];
-            A[i][j] = A[j][i];
-            A[j][i] = temp;
+            integer_swap(&arr[i][j], &arr[j][i]);
         }
         k++;
     }
