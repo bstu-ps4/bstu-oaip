@@ -13,3 +13,6 @@ App
 *.synctex(busy)
 *.synctex.gz
 *.toc
+
+# flowcharts
+*.~vsdx
