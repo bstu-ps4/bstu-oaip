@@ -148,10 +148,12 @@
 .
 ├── Makefile
 ├── inc
+│   ├── char_swap.h
 │   ├── get_invert_string.h
 │   ├── lab.h
 │   └── main.h
 └── src
+    ├── char_swap.c
     ├── get_invert_string.c
     ├── lab.c
     └── main.c
@@ -163,16 +165,24 @@
 \lstinputlisting[language=make]{b/7/Makefile}
 
 \subsubsection{main}
+Блоксхема на рисунке \ref{fig:b_7_main}.
 \lstinputlisting[language=C]{b/7/inc/main.h}
 \lstinputlisting[language=C]{b/7/src/main.c}
 
 \subsubsection{lab}
+Блоксхема на рисунке \ref{fig:b_7_lab}.
 \lstinputlisting[language=C]{b/7/inc/lab.h}
 \lstinputlisting[language=C]{b/7/src/lab.c}
 
 \subsubsection{get\_inverting\_string}
+Блоксхема на рисунке \ref{fig:b_7_get_invert_string}.
 \lstinputlisting[language=C]{b/7/inc/get_invert_string.h}
 \lstinputlisting[language=C]{b/7/src/get_invert_string.c}
+
+\subsubsection{char\_swap}
+Блоксхема на рисунке \ref{fig:b_7_char_swap}.
+\lstinputlisting[language=C]{b/7/inc/char_swap.h}
+\lstinputlisting[language=C]{b/7/src/char_swap.c}
 
 \subsection{Исполняемая программа}
 
@@ -319,6 +329,38 @@ Combin2(1, 3) = -1
     }
     \caption{transp\_matrix()}
     \label{fig:a_25_transp_matrix}
+\end{figure}
+
+\begin{figure}[h]
+    \center{
+        \includegraphics[]{b/7/flowcharts/main.png}
+    }
+    \caption{main()}
+    \label{fig:b_7_main}
+\end{figure}
+
+\begin{figure}[h]
+    \center{
+        \includegraphics[]{b/7/flowcharts/lab.png}
+    }
+    \caption{lab()}
+    \label{fig:b_7_lab}
+\end{figure}
+
+\begin{figure}[h]
+    \center{
+        \includegraphics[]{b/7/flowcharts/get_invert_string.png}
+    }
+    \caption{get\_invert\_string()}
+    \label{fig:b_7_get_invert_string}
+\end{figure}
+
+\begin{figure}[h]
+    \center{
+        \includegraphics[]{b/7/flowcharts/char_swap.png}
+    }
+    \caption{char\_swap()}
+    \label{fig:b_7_char_swap}
 \end{figure}
 
 \end{document}

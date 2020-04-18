@@ -15,9 +15,7 @@ char* get_invert_string(char* S, int K, int N)
 
     for (int i = 0; i < N / 2; i++)
     {
-        char temp = S[K + i];
-        S[K + i] = S[K +  (N - 1) - i];
-        S[K + (N - 1) - i] = temp;
+        char_swap(&S[K + i], &S[K + (N - 1) - i]);
     }
 
     return S;

@@ -2,6 +2,7 @@ APP_name = App
 CC = gcc
 
 # root folder - - - - - - - - - -
+SRC_root += char_swap.c
 SRC_root += get_invert_string.c
 SRC_root += lab.c
 SRC_root += main.c

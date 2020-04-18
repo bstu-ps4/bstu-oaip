@@ -4,6 +4,8 @@
 
 #include <string.h>
 
+#include "char_swap.h"
+
 char* get_invert_string(char*, int, int);
 
 #endif
