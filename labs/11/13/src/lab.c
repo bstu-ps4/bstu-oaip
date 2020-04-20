@@ -42,22 +42,6 @@ void menu(int ID, struct structure_for_car* cars_data)
     }
 }
 
-void outToMenu(int ID, struct structure_for_car* cars_data)
-{
-    printf("\n");
-    printf("0. Выйти в главное меню\n");
-
-    int choosen_case;
-    switch(choosen_case = getch())
-    {
-        case '0':
-            menu(ID, cars_data);
-            break;
-        default:
-            outToMenu(ID, cars_data);
-    }
-}
-
 void input_data(int ID, struct structure_for_car* cars_data)
 {
     clearConsole();
@@ -93,35 +77,38 @@ void out_data(int ID, struct structure_for_car* cars_data)
 {
     clearConsole();
 
-    printf("ID  ");                 //printf("%-4s", "ID");
-    printf("Номер     ");           //printf("%-10s","Номер");
-    printf("Марка     ");           //printf("%-10s", "Марка");
-    printf("Фамилия             "); //printf("%-20s", "Фамилия");
-    printf("Осмотр    ");           //printf("%-10s", "Осмотр");
+    printf("ID\t");
+    printf("Номер\t");
+    printf("Марка\t");
+    printf("Фамилия\t");
+    printf("Осмотр\t");
     printf("\n");
 
     for (int i = 0; i < ID; i++)
     {
-        printf("%-4d", i);
-        printf("%-10s", cars_data[i].number);
-        printf("%-10s", cars_data[i].mark);
-        printf("%-20s", cars_data[i].surname);
-        printf("%-10s", (cars_data[i].osmotr == '1'? "Пройден": "Не пройден"));
+        printf("%d\t", i);
+        printf("%s\t", cars_data[i].number);
+        printf("%s\t", cars_data[i].mark);
+        printf("%s\t", cars_data[i].surname);
+        printf("%s\t", (cars_data[i].osmotr == '1'? "Пройден": "Не пройден"));
         printf("\n");
     }
-    outToMenu(ID, cars_data);
+    pause_console();
+    menu(ID, cars_data);
 }
 
 void sort_data(int ID, struct structure_for_car* cars_data)
 {
     clearConsole();
 
-    outToMenu(ID, cars_data);
+    pause_console();
+    menu(ID, cars_data);
 }
 
 void del_data(int ID, struct structure_for_car* cars_data)
 {
     clearConsole();
 
-    outToMenu(ID, cars_data);
+    pause_console();
+    menu(ID, cars_data);
 }

@@ -7,6 +7,7 @@ SRC_root += encoding.c
 SRC_root += getch.c
 SRC_root += lab.c
 SRC_root += main.c
+SRC_root += pause_console.c
 # end root folder - - - - - - - - - -
 
 SOURCES = $(SRC_root)
