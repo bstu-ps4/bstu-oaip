@@ -5,6 +5,5 @@
     #include "clearConsole.h"
     #include "pause_console.h"
 
-
-    //void del_data(int ID, struct structure_for_car* cars_data);
+    void del_data(int, struct structure_for_car*);
 #endif
