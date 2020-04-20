@@ -11,5 +11,5 @@
     #include "sort_data.h"
     #include "del_data.h"
 
-    //void menu(int ID, struct structure_for_car* cars_data);
+    void menu(int, struct structure_for_car*);
 #endif

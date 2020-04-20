@@ -4,6 +4,7 @@
     #include "lab.h"
     #include "clearConsole.h"
     #include "pause_console.h"
+    #include "menu.h"
 
     void sort_data(int, struct structure_for_car*);
 #endif

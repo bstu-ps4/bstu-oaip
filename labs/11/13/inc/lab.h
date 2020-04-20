@@ -7,6 +7,7 @@
     #include "clearConsole.h"
     #include "getch.h"
     #include "pause_console.h"
+    //#include "menu.h"
 
     struct structure_for_car
     {
@@ -23,5 +24,5 @@
     };
 
     void lab();
-    void menu(int ID, struct structure_for_car* );
+   /**/void menu(int ID, struct structure_for_car* );/**/
 #endif

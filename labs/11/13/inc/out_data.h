@@ -6,6 +6,7 @@
     #include "lab.h"
     #include "pause_console.h"
     #include "clearConsole.h"
+    #include "menu.h"
 
     void out_data(int ID, struct structure_for_car*);
 #endif
