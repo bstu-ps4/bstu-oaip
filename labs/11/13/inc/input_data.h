@@ -7,5 +7,5 @@
     #include "lab.h"
     #include "clearConsole.h"
 
-    //void input_data(int ID, struct structure_for_car* cars_data);
+    void input_data(int ID, struct structure_for_car*);
 #endif

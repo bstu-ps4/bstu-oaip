@@ -24,7 +24,6 @@
 
     void lab();
     void menu(int ID, struct structure_for_car* );
-    void input_data(int ID, struct structure_for_car* );
     void out_data(int ID, struct structure_for_car* );
     void sort_data(int ID, struct structure_for_car* );
     void del_data(int ID, struct structure_for_car* );
