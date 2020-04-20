@@ -7,6 +7,7 @@
     #include "getch.h"
     #include "lab.h"
     #include "input_data.h"
+    #include "out_data.h"
 
     //void menu(int ID, struct structure_for_car* cars_data);
 #endif

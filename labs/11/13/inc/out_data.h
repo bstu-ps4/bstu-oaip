@@ -7,5 +7,5 @@
     #include "pause_console.h"
     #include "clearConsole.h"
 
-    //void out_data(int ID, struct structure_for_car* cars_data);
+    void out_data(int ID, struct structure_for_car*);
 #endif
