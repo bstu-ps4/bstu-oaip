@@ -12,13 +12,13 @@
     struct structure_for_car
     {
         int number_size;
-        char number[10];
+        char* number;
 
         int mark_size;
-        char mark[10];
+        char* mark;
 
         int surname_size;
-        char surname[20];
+        char* surname;
 
         int osmotr;
     };
