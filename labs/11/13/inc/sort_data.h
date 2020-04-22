@@ -3,8 +3,9 @@
 #define _SORT_DATA_H_
     #include "lab.h"
     #include "clearConsole.h"
-    #include "pause_console.h"
+    #include "getch.h"
     #include "menu.h"
 
     void sort_data(int, struct structure_for_car*);
+    void sort_data_by_osmotr_field(int, struct structure_for_car*);
 #endif
