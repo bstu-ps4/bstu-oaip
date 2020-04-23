@@ -1,0 +1,179 @@
+\documentclass[12pt, a4paper]{article}
+
+\newcommand{\kafedra}{ИИТ} % Кафедра X
+
+\newcommand{\numberOfLab}{2} % Лабораторная работа №X
+\newcommand{\semestr}{2} % За X семестр
+\newcommand{\distiplina}{ОАиП} % По дисциплине <<X>>
+\newcommand{\labTitle}{Структуры, перечисления, объединения} % Тема: <<X>>
+
+% Выполнил
+\newcommand{\kurs}{1} % Студент X курса
+\newcommand{\group}{ПО-4 (1)} % группы X
+\newcommand{\labAuthor}{Галанин П. И.} % X
+
+% Проверил
+\newcommand{\teacherStatus}{ст. преподаватель} % X
+\newcommand{\teacher}{Хацкевич М. В.} % X
+
+\newcommand{\labDate}{Брест, 2020} % X
+
+\usepackage{../../sty/encoding} % кодировка
+\usepackage{../../sty/titlePage} % титульный лист
+\usepackage{../../sty/fields} % поля
+\usepackage{../../sty/imgs} % картинки
+\usepackage{../../sty/code} % исходный код
+\usepackage{../../sty/labData} % для лабораторной
+
+\begin{document}
+
+% титульный лист
+\maketitle
+\setcounter{page}{2}
+
+% содержание
+\renewcommand{\contentsname}{Содержание}
+\tableofcontents
+\newpage
+
+% контент
+\labheading
+
+\labgoal{Изучить синтаксис и правила работы со структурами. Реализовать программу с применением структур, перечислений и объединений.}
+
+\labreport
+
+\section{Условие}
+
+Создать тип структуры согласно варинту, организовать поля этой структуры так, чтобы они содержали объединение, перечисление (можно добавить дополнительные поля) и битовое поле.
+
+Создать массив структур, содержащий информацию согласно варианту индивидуального задания.
+
+Реализовать работу с массивом структур через меню: ввод данных в массив, вывод собержимого массива на экран, сортировка по одному полю, удаления записи по заданному значению поля, выборка записей согласно индивидуального задания.
+
+\begin{center}
+    \textbf{Вариант 13}
+\end{center}
+
+Сведения об автомобиле состоят из номера, марки, фамилии владельца, признака прохождения техосмотра. Для каждой марки подсчитать количество автомобилей этой марки.
+
+\section{Проект}
+
+\subsection{Структура проекта}
+
+\begin{verbatim}
+.
+├── Makefile
+├── inc
+│   ├── clearConsole.h
+│   ├── del_data.h
+│   ├── encoding.h
+│   ├── getch.h
+│   ├── input_data.h
+│   ├── lab.h
+│   ├── main.h
+│   ├── menu.h
+│   ├── out_data.h
+│   ├── pause_console.h
+│   └── sort_data
+│       ├── sort_data.h
+│       ├── sort_data_by_mark_field.h
+│       ├── sort_data_by_osmotr_field.h
+│       ├── sort_data_by_surname_field.h
+│       └── sort_data_in_number_field.h
+└── src
+    ├── clearConsole.c
+    ├── del_data.c
+    ├── encoding.c
+    ├── getch.c
+    ├── input_data.c
+    ├── lab.c
+    ├── main.c
+    ├── menu.c
+    ├── out_data.c
+    ├── pause_console.c
+    └── sort_data
+        ├── sort_data.c
+        ├── sort_data_by_mark_field.c
+        ├── sort_data_by_osmotr_field.c
+        ├── sort_data_by_surname_field.c
+        └── sort_data_in_number_field.c
+
+4 directories, 31 files
+\end{verbatim}
+
+\subsection{Исходный код}
+
+\subsubsection{Makefile}
+\lstinputlisting[language=make]{13/Makefile}
+
+\subsubsection{main()}
+\lstinputlisting[language=C]{13/inc/main.h}
+\lstinputlisting[language=C]{13/src/main.c}
+
+\subsubsection{encoding()}
+\lstinputlisting[language=C]{13/inc/encoding.h}
+\lstinputlisting[language=C]{13/src/encoding.c}
+
+\subsubsection{lab()}
+\lstinputlisting[language=C]{13/inc/lab.h}
+\lstinputlisting[language=C]{13/src/lab.c}
+
+\subsubsection{clearConsole()}
+\lstinputlisting[language=C]{13/inc/clearConsole.h}
+\lstinputlisting[language=C]{13/src/clearConsole.c}
+
+\subsubsection{getch()}
+\lstinputlisting[language=C]{13/inc/getch.h}
+\lstinputlisting[language=C]{13/src/getch.c}
+
+\subsubsection{pause\_console()}
+\lstinputlisting[language=C]{13/inc/pause_console.h}
+\lstinputlisting[language=C]{13/src/pause_console.c}
+
+\subsubsection{menu()}
+\lstinputlisting[language=C]{13/inc/menu.h}
+\lstinputlisting[language=C]{13/src/menu.c}
+
+\subsubsection{input\_data()}
+\lstinputlisting[language=C]{13/inc/input_data.h}
+\lstinputlisting[language=C]{13/src/input_data.c}
+
+\subsubsection{out\_data()}
+\lstinputlisting[language=C]{13/inc/out_data.h}
+\lstinputlisting[language=C]{13/src/out_data.c}
+
+\subsubsection{sort\_data/sort\_data()}
+\lstinputlisting[language=C]{13/inc/sort_data/sort_data.h}
+\lstinputlisting[language=C]{13/src/sort_data/sort_data.c}
+
+\subsubsection{sort\_data/sort\_data\_in\_number\_field()}
+\lstinputlisting[language=C]{13/inc/sort_data/sort_data_in_number_field.h}
+\lstinputlisting[language=C]{13/src/sort_data/sort_data_in_number_field.c}
+
+\subsubsection{sort\_data/sort\_data\_by\_mark\_field()}
+\lstinputlisting[language=C]{13/inc/sort_data/sort_data_by_mark_field.h}
+\lstinputlisting[language=C]{13/src/sort_data/sort_data_by_mark_field.c}
+
+\subsubsection{sort\_data/sort\_data\_by\_surname\_field()}
+\lstinputlisting[language=C]{13/inc/sort_data/sort_data_by_surname_field.h}
+\lstinputlisting[language=C]{13/src/sort_data/sort_data_by_surname_field.c}
+
+\subsubsection{sort\_data/sort\_data\_by\_osmotr\_field()}
+\lstinputlisting[language=C]{13/inc/sort_data/sort_data_by_osmotr_field.h}
+\lstinputlisting[language=C]{13/src/sort_data/sort_data_by_osmotr_field.c}
+
+\subsubsection{del\_data()}
+\lstinputlisting[language=C]{13/inc/del_data.h}
+\lstinputlisting[language=C]{13/src/del_data.c}
+
+
+\subsection{Исполняемая программа}
+
+\labconclusion{}
+
+\newpage
+
+\section{Приложения}
+
+\end{document}
