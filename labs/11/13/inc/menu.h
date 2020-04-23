@@ -8,7 +8,7 @@
     #include "lab.h"
     #include "input_data.h"
     #include "out_data.h"
-    #include "sort_data.h"
+    #include "sort_data/sort_data.h"
     #include "del_data.h"
 
     void menu(int, struct structure_for_car*);
