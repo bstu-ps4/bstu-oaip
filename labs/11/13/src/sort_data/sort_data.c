@@ -19,13 +19,13 @@ void sort_data(int ID, struct structure_for_car* cars_data)
         case '0':
             break;
         case '1':
-            sort_data_by_number_field(ID, cars_data);
+            get_sorted_array(ID, cars_data, sort_data_by_number_field);
             break;
         case '2':
-            sort_data_by_mark_field(ID, cars_data);
+            get_sorted_array(ID, cars_data, sort_data_by_mark_field);
             break;
         case '3':
-            sort_data_by_surname_field(ID, cars_data);
+            get_sorted_array(ID, cars_data, sort_data_by_surname_field);
             break;
         case '4':
             sort_data_by_osmotr_field(ID, cars_data);
@@ -35,4 +35,20 @@ void sort_data(int ID, struct structure_for_car* cars_data)
     }
 
     menu(ID, cars_data);
+}
+
+void get_sorted_array(
+    int ID,
+    struct structure_for_car* cars_data,
+    void (*sub_foo)(int ID, struct structure_for_car* cars_data, int i, int j, int k)
+)
+{
+    for (int i = 0; i < ID; i++)
+    {
+        for (int j = 0; j < ID; j++)
+        {
+            int k = 0;
+            sub_foo(ID, cars_data, i, j, k);
+        }
+    }
 }

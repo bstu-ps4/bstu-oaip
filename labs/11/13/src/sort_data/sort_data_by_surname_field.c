@@ -1,18 +1,19 @@
 #include "../../inc/sort_data/sort_data_by_surname_field.h"
 
-void sort_data_by_surname_field(int ID, struct structure_for_car* cars_data)
+void sort_data_by_surname_field(int ID, struct structure_for_car* cars_data, int i, int j, int k)
 {
-    for (int i = 0; i < ID; i++)
+    if (k <= strlen(cars_data[i].surname) && k <= strlen(cars_data[j].surname))
     {
-        for (int j = 0; j < ID; j++)
+        if (cars_data[i].surname[k] == cars_data[j].surname[k])
         {
-            int k = 0;
-            if (cars_data[j].surname[k] > cars_data[i].surname[k])
-            {
-                struct structure_for_car temp = cars_data[i];
-                cars_data[i] = cars_data[j];
-                cars_data[j] = temp;
-            }
+            k++;
+            sort_data_by_surname_field(ID, cars_data, i, j, k);
+        }
+        else if (cars_data[i].surname[k] < cars_data[j].surname[k])
+        {
+            struct structure_for_car temp = cars_data[i];
+            cars_data[i] = cars_data[j];
+            cars_data[j] = temp;
         }
     }
 }

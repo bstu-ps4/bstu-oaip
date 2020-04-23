@@ -11,4 +11,5 @@
     #include "sort_data_by_osmotr_field.h"
 
     void sort_data(int, struct structure_for_car*);
+    void get_sorted_array(int, struct structure_for_car*, void (*)(int, struct structure_for_car*, int, int, int));
 #endif
