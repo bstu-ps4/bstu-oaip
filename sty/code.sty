@@ -1,7 +1,7 @@
+% Исходный код - - - - - - - - - -
 \usepackage{listings}
 \usepackage[dvipsnames]{xcolor}
 \usepackage{listingsutf8}
-\usepackage{pmboxdraw} % UTF-8 в verbatim
 
 \definecolor{dkgreen}{rgb}{0,0.6,0}
 \definecolor{gray}{rgb}{0.5,0.5,0.5}
@@ -23,3 +23,11 @@
     commentstyle=\color{dkgreen}, % Стиль комментариев
     stringstyle=\color{mauve} % Стиль литералов  
 }
+
+% Псевдо код (в tex файле) - - - - - - - - - -
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+
+% Исходный код (в tex файле)
+\usepackage{tcolorbox} % нарисовать блок begin{tcolorbox} end{tcolorbox}
+\usepackage{pmboxdraw} % UTF-8 в verbatim
