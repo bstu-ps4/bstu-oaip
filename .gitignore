@@ -1,8 +1,10 @@
 # Source code
 *.exe
+*.d
 *.out
 *.o
 App
+zzz_pear_test
 
 # Latex
 *.aux
