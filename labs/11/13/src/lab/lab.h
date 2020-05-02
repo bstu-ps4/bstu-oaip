@@ -9,6 +9,12 @@
     #include "../my_libs/pause_console/pause_console.h"
     //#include "menu.h"
 
+    enum enum_osmotr
+    {
+        yes,
+        no
+    };
+
     struct structure_for_car
     {
         int number_size;
@@ -20,7 +26,7 @@
         int surname_size;
         char* surname;
 
-        int osmotr;
+        enum enum_osmotr osmotr;
     };
 
     void lab();
