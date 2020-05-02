@@ -1,119 +1,137 @@
 \begin{verbatim}
-.
-├── Makefile
-└── src
-    ├── lab
-    │   ├── lab.c
-    │   ├── lab.drawio
-    │   ├── lab.h
-    │   ├── lab.png
-    │   ├── lab.tex
-    │   └── menu
-    │       ├── del_data
-    │       │   ├── del_data.c
-    │       │   ├── del_data.drawio
-    │       │   ├── del_data.h
-    │       │   ├── del_data.png
-    │       │   └── del_data.tex
-    │       ├── input_data
-    │       │   ├── input_data.c
-    │       │   ├── input_data.drawio
-    │       │   ├── input_data.h
-    │       │   ├── input_data.png
-    │       │   ├── input_data.tex
-    │       │   ├── input_mark
-    │       │   │   ├── input_mark.c
-    │       │   │   ├── input_mark.drawio
-    │       │   │   ├── input_mark.h
-    │       │   │   ├── input_mark.png
-    │       │   │   └── input_mark.tex
-    │       │   ├── input_number
-    │       │   │   ├── input_number.c
-    │       │   │   ├── input_number.drawio
-    │       │   │   ├── input_number.h
-    │       │   │   ├── input_number.png
-    │       │   │   └── input_number.tex
-    │       │   ├── input_osmotr
-    │       │   │   ├── input_osmotr.c
-    │       │   │   ├── input_osmotr.drawio
-    │       │   │   ├── input_osmotr.h
-    │       │   │   ├── input_osmotr.png
-    │       │   │   └── input_osmotr.tex
-    │       │   └── input_surname
-    │       │       ├── input_surname.c
-    │       │       ├── input_surname.drawio
-    │       │       ├── input_surname.h
-    │       │       ├── input_surname.png
-    │       │       └── input_surname.tex
-    │       ├── menu.c
-    │       ├── menu.drawio
-    │       ├── menu.h
-    │       ├── menu.png
-    │       ├── menu.tex
-    │       ├── out_data
-    │       │   ├── out_data.c
-    │       │   ├── out_data.h
-    │       │   ├── out_data.png
-    │       │   └── out_data.tex
-    │       └── sort_data
-    │           ├── sort_data-get_sorted_array.png
-    │           ├── sort_data-sort_data.png
-    │           ├── sort_data.c
-    │           ├── sort_data.drawio
-    │           ├── sort_data.h
-    │           ├── sort_data.tex
-    │           ├── sort_data_by_mark_field
-    │           │   ├── sort_data_by_mark_field.c
-    │           │   ├── sort_data_by_mark_field.drawio
-    │           │   ├── sort_data_by_mark_field.h
-    │           │   ├── sort_data_by_mark_field.png
-    │           │   └── sort_data_by_mark_field.tex
-    │           ├── sort_data_by_osmotr_field
-    │           │   ├── sort_data_by_osmotr_field.c
-    │           │   ├── sort_data_by_osmotr_field.drawio
-    │           │   ├── sort_data_by_osmotr_field.h
-    │           │   ├── sort_data_by_osmotr_field.png
-    │           │   └── sort_data_by_osmotr_field.tex
-    │           ├── sort_data_by_surname_field
-    │           │   ├── sort_data_by_surname_field.c
-    │           │   ├── sort_data_by_surname_field.drawio
-    │           │   ├── sort_data_by_surname_field.h
-    │           │   ├── sort_data_by_surname_field.png
-    │           │   └── sort_data_by_surname_field.tex
-    │           └── sort_data_in_number_field
-    │               ├── sort_data_in_number_field.c
-    │               ├── sort_data_in_number_field.drawio
-    │               ├── sort_data_in_number_field.h
-    │               ├── sort_data_in_number_field.png
-    │               └── sort_data_in_number_field.tex
-    ├── main.c
-    ├── main.drawio
-    ├── main.h
-    ├── main.png
-    ├── main.tex
-    └── my_libs
-        ├── clearConsole
-        │   ├── clearConsole.c
-        │   ├── clearConsole.drawio
-        │   ├── clearConsole.h
-        │   ├── clearConsole.png
-        │   └── clearConsole.tex
-        ├── encoding
-        │   ├── encoding.c
-        │   ├── encoding.drawio
-        │   ├── encoding.h
-        │   ├── encoding.png
-        │   └── encoding.tex
-        ├── getch
-        │   ├── getch.c
-        │   ├── getch.h
-        │   └── getch.tex
-        └── pause_console
-            ├── pause_console.c
-            ├── pause_console.drawio
-            ├── pause_console.h
-            ├── pause_console.png
-            └── pause_console.tex
+    .
+    ├── labs
+    │   └── 11
+    │       ├── 13
+    │       │   ├── Makefile
+    │       │   └── src
+    │       │       ├── lab
+    │       │       │   ├── lab.c
+    │       │       │   ├── lab.drawio
+    │       │       │   ├── lab.h
+    │       │       │   ├── lab.png
+    │       │       │   ├── lab.tex
+    │       │       │   └── menu
+    │       │       │       ├── del_data
+    │       │       │       │   ├── del_data.c
+    │       │       │       │   ├── del_data.drawio
+    │       │       │       │   ├── del_data.h
+    │       │       │       │   ├── del_data.png
+    │       │       │       │   └── del_data.tex
+    │       │       │       ├── input_data
+    │       │       │       │   ├── input_data.c
+    │       │       │       │   ├── input_data.drawio
+    │       │       │       │   ├── input_data.h
+    │       │       │       │   ├── input_data.png
+    │       │       │       │   ├── input_data.tex
+    │       │       │       │   ├── input_mark
+    │       │       │       │   │   ├── input_mark.c
+    │       │       │       │   │   ├── input_mark.drawio
+    │       │       │       │   │   ├── input_mark.h
+    │       │       │       │   │   ├── input_mark.png
+    │       │       │       │   │   └── input_mark.tex
+    │       │       │       │   ├── input_number
+    │       │       │       │   │   ├── input_number.c
+    │       │       │       │   │   ├── input_number.drawio
+    │       │       │       │   │   ├── input_number.h
+    │       │       │       │   │   ├── input_number.png
+    │       │       │       │   │   └── input_number.tex
+    │       │       │       │   ├── input_osmotr
+    │       │       │       │   │   ├── input_osmotr.c
+    │       │       │       │   │   ├── input_osmotr.drawio
+    │       │       │       │   │   ├── input_osmotr.h
+    │       │       │       │   │   ├── input_osmotr.png
+    │       │       │       │   │   └── input_osmotr.tex
+    │       │       │       │   └── input_surname
+    │       │       │       │       ├── input_surname.c
+    │       │       │       │       ├── input_surname.drawio
+    │       │       │       │       ├── input_surname.h
+    │       │       │       │       ├── input_surname.png
+    │       │       │       │       └── input_surname.tex
+    │       │       │       ├── menu.c
+    │       │       │       ├── menu.drawio
+    │       │       │       ├── menu.h
+    │       │       │       ├── menu.png
+    │       │       │       ├── menu.tex
+    │       │       │       ├── out_data
+    │       │       │       │   ├── out_data.c
+    │       │       │       │   ├── out_data.drawio
+    │       │       │       │   ├── out_data.h
+    │       │       │       │   ├── out_data.png
+    │       │       │       │   └── out_data.tex
+    │       │       │       └── sort_data
+    │       │       │           ├── sort_data-get_sorted_array.png
+    │       │       │           ├── sort_data-sort_data.png
+    │       │       │           ├── sort_data.c
+    │       │       │           ├── sort_data.drawio
+    │       │       │           ├── sort_data.h
+    │       │       │           ├── sort_data.tex
+    │       │       │           ├── sort_data_by_mark_field
+    │       │       │           │   ├── sort_data_by_mark_field.c
+    │       │       │           │   ├── sort_data_by_mark_field.drawio
+    │       │       │           │   ├── sort_data_by_mark_field.h
+    │       │       │           │   ├── sort_data_by_mark_field.png
+    │       │       │           │   └── sort_data_by_mark_field.tex
+    │       │       │           ├── sort_data_by_osmotr_field
+    │       │       │           │   ├── sort_data_by_osmotr_field.c
+    │       │       │           │   ├── sort_data_by_osmotr_field.drawio
+    │       │       │           │   ├── sort_data_by_osmotr_field.h
+    │       │       │           │   ├── sort_data_by_osmotr_field.png
+    │       │       │           │   └── sort_data_by_osmotr_field.tex
+    │       │       │           ├── sort_data_by_surname_field
+    │       │       │           │   ├── sort_data_by_surname_field.c
+    │       │       │           │   ├── sort_data_by_surname_field.drawio
+    │       │       │           │   ├── sort_data_by_surname_field.h
+    │       │       │           │   ├── sort_data_by_surname_field.png
+    │       │       │           │   └── sort_data_by_surname_field.tex
+    │       │       │           └── sort_data_in_number_field
+    │       │       │               ├── sort_data_in_number_field.c
+    │       │       │               ├── sort_data_in_number_field.drawio
+    │       │       │               ├── sort_data_in_number_field.h
+    │       │       │               ├── sort_data_in_number_field.png
+    │       │       │               └── sort_data_in_number_field.tex
+    │       │       ├── main.c
+    │       │       ├── main.drawio
+    │       │       ├── main.h
+    │       │       ├── main.png
+    │       │       ├── main.tex
+    │       │       └── my_libs
+    │       │           ├── clearConsole
+    │       │           │   ├── clearConsole.c
+    │       │           │   ├── clearConsole.drawio
+    │       │           │   ├── clearConsole.h
+    │       │           │   ├── clearConsole.png
+    │       │           │   └── clearConsole.tex
+    │       │           ├── encoding
+    │       │           │   ├── encoding.c
+    │       │           │   ├── encoding.drawio
+    │       │           │   ├── encoding.h
+    │       │           │   ├── encoding.png
+    │       │           │   └── encoding.tex
+    │       │           ├── getch
+    │       │           │   ├── getch.c
+    │       │           │   ├── getch.h
+    │       │           │   └── getch.tex
+    │       │           └── pause_console
+    │       │               ├── pause_console.c
+    │       │               ├── pause_console.drawio
+    │       │               ├── pause_console.h
+    │       │               ├── pause_console.png
+    │       │               └── pause_console.tex
+    │       └── report
+    │           ├── _condition.tex
+    │           ├── _executable_App.tex
+    │           ├── _flowcharts.tex
+    │           ├── _src_code.tex
+    │           ├── _tree_project.tex
+    │           └── report.tex
+    └── sty
+        ├── code.sty
+        ├── encoding.sty
+        ├── fields.sty
+        ├── imgs.sty
+        ├── labData.sty
+        └── titlePage.sty
 
-20 directories, 94 files
+24 directories, 107 files
 \end{verbatim}
