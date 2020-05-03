@@ -9,6 +9,7 @@ void menu(int ID, struct structure_for_car* cars_data)
     printf("2. Вывод данных\n");
     printf("3. Сортирова по полю\n");
     printf("4. Удалить запись\n");
+    printf("5. Сохранить как\n");
     printf("0. Выйти из программы\n");
 
     int choosen_case;
@@ -27,6 +28,9 @@ void menu(int ID, struct structure_for_car* cars_data)
             break;
         case '4':
             del_data(ID, cars_data);
+            break;
+        case '5':
+            save_as(ID, cars_data);
             break;
         default:
             menu(ID, cars_data);
