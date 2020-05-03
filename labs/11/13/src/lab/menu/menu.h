@@ -6,6 +6,7 @@
     #include "../../my_libs/clearConsole/clearConsole.h"
     #include "../../my_libs/getch/getch.h"
     #include "../lab.h"
+    #include "open_file/open_file.h"
     #include "input_data/input_data.h"
     #include "out_data/out_data.h"
     #include "sort_data/sort_data.h"
