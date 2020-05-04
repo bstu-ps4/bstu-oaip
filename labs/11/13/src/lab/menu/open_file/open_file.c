@@ -6,6 +6,7 @@ void open_file(int ID, struct structure_for_car* cars_data)
 
     free(cars_data); //освобождение массива, т. к. мы запишем в него новые данные из нового файла
     ID = 0; //начали нумерацию с 0
+    cars_data = (struct structure_for_car*) calloc(ID, sizeof(struct structure_for_car)); //динамическое выделение памяти массиву
 
     int path_size;
     printf("Размер пути файла: ");
@@ -20,8 +21,7 @@ void open_file(int ID, struct structure_for_car* cars_data)
     free(path); //очистка пути файла, т. к. он не нужен
 
     int i = 0, number_of_string = 0, string_size = 0;
-    cars_data = (struct structure_for_car*) calloc(ID, sizeof(struct structure_for_car)); //динамическое выделение памяти массиву
-    char* str = (char*) calloc(509, sizeof(char)); //выделение памяти для строки
+    char* str = (char*) calloc(string_size, sizeof(char)); //выделение памяти для строки
     while(!feof(file_pointer)) // пока не достигнут конец файла
     {
         char ch = fgetc(file_pointer); //взять символ из файла
