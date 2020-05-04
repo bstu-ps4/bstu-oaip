@@ -19,7 +19,7 @@ void open_file(int ID, struct structure_for_car* cars_data)
     FILE* file_pointer = fopen(path, "r"); //открыли файл для чтения
     free(path); //очистка пути файла, т. к. он не нужен
 
-    int i = 0, number_of_string = 0;
+    int i = 0, number_of_string = 0, string_size = 0;
     cars_data = (struct structure_for_car*) calloc(ID, sizeof(struct structure_for_car)); //динамическое выделение памяти массиву
     char* str = (char*) calloc(509, sizeof(char)); //выделение памяти для строки
     while(!feof(file_pointer)) // пока не достигнут конец файла
@@ -27,6 +27,8 @@ void open_file(int ID, struct structure_for_car* cars_data)
         char ch = fgetc(file_pointer); //взять символ из файла
         if(ch != '\t' && ch != '\n') //если это не табуляция и не конец строки
         {
+            string_size++; //увеличить переменную, чтобы увеличить динамический массив
+            str = (char*) realloc(str, string_size * sizeof(char)); //увеличиваем динамический массив
             str[i] = ch; //записать символ в строку
             i++; // увеличить индекс на 1
             //printf("%c", ch);
@@ -88,7 +90,8 @@ void open_file(int ID, struct structure_for_car* cars_data)
             }
             printf("%s\n", str); //вывод в консоль строки, которое было записано
             free(str); // очистка строки, т. к. она уже не нужна
-            str = (char*) calloc(509, sizeof(char)); //выделение динамической памяти для строки
+            string_size = 0;
+            str = (char*) calloc(string_size, sizeof(char)); //выделение динамической памяти для строки
         }
     }
     free(str);
