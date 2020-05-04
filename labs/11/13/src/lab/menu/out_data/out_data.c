@@ -8,13 +8,13 @@ void out_data(int ID, struct structure_for_car* cars_data)
     printf(" ID   |");
 
     printf(" байт /");
-    printf(" Номер      |");
+    printf(" Номер    |");
 
     printf(" байт /");
-    printf(" Марка      |");
+    printf(" Марка    |");
 
     printf(" байт /");
-    printf(" Фамилия              |");
+    printf(" Фамилия      |");
 
     printf(" Осмотр     |");
     printf("\n");
@@ -23,13 +23,13 @@ void out_data(int ID, struct structure_for_car* cars_data)
     printf(" ---- |"); //ID
 
     printf(" ---- /"); //байт
-    printf(" ---------- |"); //Номер
+    printf(" -------- |"); //Номер
 
     printf(" ---- /"); //байт
-    printf(" ---------- |"); //Марка
+    printf(" -------- |"); //Марка
 
     printf(" ---- /"); //байт
-    printf(" -------------------- |"); //Фамилия
+    printf(" ------------ |"); //Фамилия
 
     printf(" ---------- |"); //Осмотр
     printf("\n");
@@ -40,13 +40,13 @@ void out_data(int ID, struct structure_for_car* cars_data)
         printf(" %-4d |", i);
 
         printf(" %-4d /", cars_data[i].number_size);
-        printf(" %-10s |", cars_data[i].number);
+        printf(" %-8s |", cars_data[i].number);
 
         printf(" %-4d /", cars_data[i].mark_size);
-        printf(" %-10s |", cars_data[i].mark);
+        printf(" %-8s |", cars_data[i].mark);
 
         printf(" %-4d /", cars_data[i].surname_size);
-        printf(" %-20s |", cars_data[i].surname);
+        printf(" %-12s |", cars_data[i].surname);
 
         printf(" %s |", (cars_data[i].osmotr == yes? "Пройден   ": "Не пройден"));
         printf("\n");
