@@ -15,10 +15,10 @@ void save_as(int ID, struct structure_for_car* cars_data)
         case '0':
             break;
         case '1':
-            file_out_data(ID, cars_data, "data.tsv");
+            file_out_data(ID, cars_data, "data.tsv", "wt");
             break;
         case '2':
-            file_out_data(ID, cars_data, "data.bin");
+            file_out_data(ID, cars_data, "data.bin", "wb");
             break;
         default:
             save_as(ID, cars_data);

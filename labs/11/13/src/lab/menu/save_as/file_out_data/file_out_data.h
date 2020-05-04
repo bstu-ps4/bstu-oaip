@@ -6,5 +6,5 @@
 
     #include "../../../lab.h"
 
-    void file_out_data(int, struct structure_for_car*, char*);
+    void file_out_data(int, struct structure_for_car*, char*, char*);
 #endif

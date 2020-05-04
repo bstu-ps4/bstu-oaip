@@ -1,8 +1,8 @@
 #include "file_out_data.h"
 
-void file_out_data(int ID, struct structure_for_car* cars_data, char* file_name)
+void file_out_data(int ID, struct structure_for_car* cars_data, char* file_name, char* file_mode)
 {
-    FILE* file_pointer = fopen(file_name, "w+b");
+    FILE* file_pointer = fopen(file_name, file_mode);
 
     for (int i = 0; i < ID; i++)
     {
