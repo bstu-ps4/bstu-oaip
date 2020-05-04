@@ -8,6 +8,7 @@
 
     #include "../../../my_libs/clearConsole/clearConsole.h"
     #include "../../../my_libs/pause_console/pause_console.h"
+    #include "../../../my_libs/getch/getch.h"
     #include "../../lab.h"
     #include "../menu.h"
 
