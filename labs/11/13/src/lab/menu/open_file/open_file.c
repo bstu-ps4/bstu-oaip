@@ -5,6 +5,7 @@ void open_file(int ID, struct structure_for_car* cars_data)
     clearConsole();
 
     free(cars_data); //освобождение массива, т. к. мы запишем в него новые данные из нового файла
+    ID = 0; //начали нумерацию с 0
 
     int path_size;
     printf("Размер пути файла: ");
@@ -18,8 +19,8 @@ void open_file(int ID, struct structure_for_car* cars_data)
     FILE* file_pointer = fopen(path, "r"); //открыли файл для чтения
     free(path); //очистка пути файла, т. к. он не нужен
 
-    int i = 0, number_of_string = 0, cycle_ID = 0;
-    cars_data = (struct structure_for_car*) calloc(cycle_ID, sizeof(struct structure_for_car)); //динамическое выделение памяти массиву
+    int i = 0, number_of_string = 0;
+    cars_data = (struct structure_for_car*) calloc(ID, sizeof(struct structure_for_car)); //динамическое выделение памяти массиву
     char* str = (char*) calloc(509, sizeof(char)); //выделение памяти для строки
     while(!feof(file_pointer)) // пока не достигнут конец файла
     {
@@ -38,50 +39,50 @@ void open_file(int ID, struct structure_for_car* cars_data)
             {
                 case 0: //случай для ID
                     printf(" = = = = = case 0 = = = = =\n");
-                    cycle_ID = atoi(str) + 1; //перевести слово в цифру
-                    cars_data = (struct structure_for_car*) realloc(cars_data, cycle_ID * sizeof(struct structure_for_car)); // увеличение динамической памяти
+                    ID = atoi(str); //перевести слово в цифру
+                    cars_data = (struct structure_for_car*) realloc(cars_data, (ID + 1) * sizeof(struct structure_for_car)); // увеличение динамической памяти
                     number_of_string++; //переход к следующему случаю в следующий раз
                     break;
                 // = = = = =
                 case 1: //размер номера
                     printf(" = = = = = case 1 = = = = =\n");
-                    cars_data[cycle_ID - 1].number_size = atoi(str); //строку в число, записав в структуру
+                    cars_data[ID].number_size = atoi(str); //строку в число, записав в структуру
                     number_of_string++; //переход к следующему случаю в следующий раз
                     break;
                 case 2: //номер
                     printf(" = = = = = case 2 = = = = =\n");
-                    cars_data[cycle_ID - 1].number = (char*) calloc(cars_data[cycle_ID].number_size, sizeof(char)); //выделение динамической памяти
-                    strcpy(cars_data[cycle_ID - 1].number, str); //копирование строки в структуру
+                    cars_data[ID].number = (char*) calloc(cars_data[ID].number_size, sizeof(char)); //выделение динамической памяти
+                    strcpy(cars_data[ID].number, str); //копирование строки в структуру
                     number_of_string++; //переход к следующему случаю в следующий раз
                     break;
                 // = = = = =
                 case 3: //размер марки
                     printf(" = = = = = case 3 = = = = =\n");
-                    cars_data[cycle_ID - 1].mark_size = atoi(str); //строку в число, записав в структуру
+                    cars_data[ID].mark_size = atoi(str); //строку в число, записав в структуру
                     number_of_string++; //переход к следующему случаю в следующий раз
                     break;
                 case 4: //марка
                     printf(" = = = = = case 4 = = = = =\n");
-                    cars_data[cycle_ID - 1].mark = (char*) calloc(cars_data[cycle_ID].mark_size, sizeof(char)); //выделение динамической памяти
-                    strcpy(cars_data[cycle_ID - 1].mark, str); //копирование строки в структуру
+                    cars_data[ID].mark = (char*) calloc(cars_data[ID].mark_size, sizeof(char)); //выделение динамической памяти
+                    strcpy(cars_data[ID].mark, str); //копирование строки в структуру
                     number_of_string++; //переход к следующему случаю в следующий раз
                     break;
                 // = = = = =
                 case 5: //размер фамилии
                     printf(" = = = = = case 5 = = = = =\n");
-                    cars_data[cycle_ID - 1].surname_size = atoi(str); //строку в число, записав в структуру
+                    cars_data[ID].surname_size = atoi(str); //строку в число, записав в структуру
                     number_of_string++; //переход к следующему случаю в следующий раз
                     break;
                 case 6: //фамилия
                     printf(" = = = = = case 6 = = = = =\n");
-                    cars_data[cycle_ID - 1].surname = (char*) calloc(cars_data[cycle_ID].surname_size, sizeof(char)); //выделение динамической памяти
-                    strcpy(cars_data[cycle_ID - 1].surname, str); //копирование строки в структуру
+                    cars_data[ID].surname = (char*) calloc(cars_data[ID].surname_size, sizeof(char)); //выделение динамической памяти
+                    strcpy(cars_data[ID].surname, str); //копирование строки в структуру
                     number_of_string++; //переход к следующему случаю в следующий раз
                     break;
                 // = = = = =
                 case 7: //осмотр
                     printf(" = = = = = case 7 = = = = =\n");
-                    cars_data[cycle_ID - 1].osmotr = atoi(str); //строку в число, записа в структуру
+                    cars_data[ID].osmotr = atoi(str); //строку в число, записа в структуру
                     number_of_string = 0; //переход к следующему случаю в следующий раз
                     break;
             }
@@ -91,10 +92,8 @@ void open_file(int ID, struct structure_for_car* cars_data)
         }
     }
     free(str);
-    ID = cycle_ID;
     fclose(file_pointer);
 
     pause_console();
-
-    menu(ID, cars_data);
+    menu(ID + 1, cars_data); //ID + 1, так как вывод файлов от i = 0 до i < ID
 }
