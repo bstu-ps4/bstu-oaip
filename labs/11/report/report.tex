@@ -2,10 +2,10 @@
 
 \newcommand{\kafedra}{ИИТ} % Кафедра X
 
-\newcommand{\numberOfLab}{11} % Лабораторная работа №X
+\newcommand{\numberOfLab}{11/12} % Лабораторная работа №X
 \newcommand{\semestr}{2} % За X семестр
 \newcommand{\distiplina}{ОАиП} % По дисциплине <<X>>
-\newcommand{\labTitle}{Структуры, перечисления, объединения} % Тема: <<X>>
+\newcommand{\labTitle}{Структуры, перечисления, объединения. / Бинарные и текстовые файлы} % Тема: <<X>>
 
 % Выполнил
 \newcommand{\kurs}{1} % Студент X курса
@@ -40,31 +40,53 @@
 \labheading
 
 % = = = = = Цель
-\labgoal{Изучить синтаксис и правила работы со структурами. Реализовать программу с применением структур, перечислений и объединений.}
+\labgoal{
+\begin{enumerate}
+    \item Изучить синтаксис и правила работы со структурами. Реализовать программу с применением структур, перечислений и объединений.
+    \item Изучить принципы программирования с использованием бинарных файлов. Ознакомиться с основными функциями в Си для работы с бинарными файлами.
+\end{enumerate}
+}
 
 % = = = = = Ход Работы
 \labreport
 
-% = = = = = Условие
-\section{Условие}
-    \input{_condition.tex}
-
-% = = = = = Проект
-\newpage
+% = = = = = Структура проекта
 \section{Структура проекта}
-    \input{_tree_project.tex}
+        \input{_tree_project.tex}
 
-% = = = = = Исходный код
+% = = = = = Основа
 \newpage
-\section{Исходный код}
-    \input{_src_code.tex}
+\section{Основа}
+    % = = = = = Условие
+    \subsection{Условие}
+        \input{_condition.tex}
 
-% = = = = = Исполняемая программа
+    % = = = = = Исходный код
+    \newpage
+    \subsection{Исходный код}
+        \input{_src_code.tex}
+
+    % = = = = = Исполняемая программа
+    \newpage
+    \subsection{Исполняемая программа}
+        \input{_executable_App.tex}
+
+    % = = = = = Вывод ЛР
+    \labconclusion{}
+
+% = = = = =
 \newpage
-\section{Исполняемая программа}
-    \input{_executable_App.tex}
+\section{Бинарные и текстовые файлы}
+    % = = = = = Условие
+    \subsection{Условие}
+        \input{_condition2.tex}
 
-% = = = = = Вывод ЛР
-\labconclusion{}
+    % = = = = = Исходный код
+    \newpage
+    \subsection{Исходный код}
+        \input{_src_code2.tex}
+
+    % = = = = = Вывод ЛР
+    \labconclusion{}
 
 \end{document}
