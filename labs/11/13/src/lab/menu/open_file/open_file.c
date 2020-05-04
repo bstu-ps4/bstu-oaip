@@ -1,7 +1,5 @@
 #include "open_file.h"
 
-#include <string.h>
-
 void open_file(int ID, struct structure_for_car* cars_data)
 {
     clearConsole();

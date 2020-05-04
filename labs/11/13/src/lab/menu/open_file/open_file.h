@@ -4,6 +4,7 @@
     
     #include <stdio.h>
     #include <stdlib.h>
+    #include <string.h>
 
     #include "../../../my_libs/clearConsole/clearConsole.h"
     #include "../../../my_libs/pause_console/pause_console.h"
