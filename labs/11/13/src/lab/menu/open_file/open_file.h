@@ -11,6 +11,8 @@
     #include "../../../my_libs/getch/getch.h"
     #include "../../lab.h"
     #include "../menu.h"
+    #include "get_file_pointer/get_file_pointer.h"
+    #include "if_file_not_founded/if_file_not_founded.h"
 
     void open_file(int, struct structure_for_car*);
 #endif

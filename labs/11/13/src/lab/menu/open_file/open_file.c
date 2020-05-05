@@ -8,17 +8,7 @@ void open_file(int ID, struct structure_for_car *cars_data)
     ID = 0;                                                                               //начали нумерацию с 0
     cars_data = (struct structure_for_car *)calloc(ID, sizeof(struct structure_for_car)); //динамическое выделение памяти массиву
 
-    int path_size;
-    printf("Размер пути файла: ");
-    scanf("%d", &path_size); //ввод размера пути файла
-
-    char *path;
-    printf("Какой файл открыть: ");
-    path = (char *)calloc(path_size, sizeof(char)); //динамическое выделение памяти для пути файла
-    scanf("%s", path);                              //ввод пути файла
-
-    FILE *file_pointer = fopen(path, "r"); //открыли файл для чтения
-    free(path);                            //очистка пути файла, т. к. он не нужен
+    FILE *file_pointer = get_file_pointer();
 
     if (file_pointer != NULL)
     {
@@ -105,22 +95,6 @@ void open_file(int ID, struct structure_for_car *cars_data)
     else
     {
         free(file_pointer);
-        clearConsole();
-        printf("Файл не найден!\n\n");
-
-        printf("Меню:\n");
-        printf("1. Открыть файл\n");
-        printf("0. Выйти в главное меню\n");
-
-        int choosen_case = getch();
-        choosen_case = getch();
-        switch (choosen_case)
-        {
-        case '0':
-            menu(ID, cars_data);
-            break;
-        default:
-            open_file(ID, cars_data);
-        }
+        if_file_not_founded(ID, cars_data);
     }
 }
