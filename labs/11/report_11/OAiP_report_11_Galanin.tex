@@ -1,0 +1,97 @@
+\documentclass[12pt, a4paper]{article}
+
+% < < < < < Переменные титульного листа
+\newcommand{\kafedra}{ИИТ} % Кафедра X
+
+\newcommand{\numberOfLab}{11} % Лабораторная работа №X
+\newcommand{\semestr}{2} % За X семестр
+\newcommand{\distiplina}{ОАиП} % По дисциплине <<X>>
+\newcommand{\labTitle}{Структуры, перечисления, объединения} % Тема: <<X>>
+
+% Выполнил
+\newcommand{\kurs}{1} % Студент X курса
+\newcommand{\group}{ПО-4 (1)} % группы X
+\newcommand{\labAuthor}{Галанин П. И.} % X
+
+% Проверил
+\newcommand{\teacherStatus}{ст. преподаватель} % X
+\newcommand{\teacher}{Хацкевич М. В.} % X
+
+\newcommand{\labDate}{Брест, 2020} % X
+% > > > > >
+
+% < < < < <
+\usepackage{../../../sty/encoding} % кодировка
+\usepackage{../../../sty/titlePage} % титульный лист
+\usepackage{../../../sty/fields} % поля
+\usepackage{../../../sty/imgs} % картинки
+\usepackage{../../../sty/code} % исходный код
+\usepackage{../../../sty/labData} % для лабораторной
+% > > > > >
+
+\begin{document}
+
+% < < < < < Титульный лист
+\maketitle
+\setcounter{page}{2}
+% > > > > >
+
+% < < < < < Содержание
+\renewcommand{\contentsname}{Содержание}
+\tableofcontents
+\newpage
+% > > > > >
+
+% < < < < < Тема ЛР
+\labheading
+% > > > > >
+
+% < < < < < Цель
+\labgoal{Изучить синтаксис и правила работы со структурами. Реализовать программу с применением структур, перечислений и объединений.}
+% > > > > >
+
+% < < < < < Ход Работы
+\labreport
+% > > > > >
+
+% < < < < < Условие
+\section{Условие}
+\input{_condition.tex}
+% > > > > >
+
+% < < < < < Условие
+\section{Структура проекта}
+\input{_tree_project.tex}
+% > > > > >
+
+% < < < < < Исходный код
+\newpage
+\section{Исходный код}
+\input{_src_code.tex}
+% > > > > >
+
+% < < < < < Исполняемая программа
+\newpage
+\section{Исполняемая программа}
+\input{_executable_App.tex}
+% > > > > >
+
+% < < < < < Вывод ЛР
+\labconclusion{Изучили синтаксис и правила работы со структурами. Реализовали программу с применением структур, перечислением.}
+% > > > > >
+
+% < < < < < Литература
+\newpage
+\begin{thebibliography}{3}
+    \bibitem{}
+    БрГТУ.ПОИТ. Лабораторная работа "Структуры, перечисления, объединения"
+\end{thebibliography}
+
+\textbf{Ссылки}
+\begin{itemize}
+    \item Репозиторий с исходным кодом\\
+    https://github.com/bstu-ps4/BSTU-OAiP
+\end{itemize}
+% > > > > >
+
+\end{document}

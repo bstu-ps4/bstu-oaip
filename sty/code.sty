@@ -3,6 +3,13 @@
 \usepackage[dvipsnames]{xcolor}
 \usepackage{listingsutf8}
 
+% Светлый малиново-красный -- малиновый
+\definecolor{my_keyword}{HTML}{d73a49}
+% Перламутрово-ежевичный -- Маренго
+\definecolor{my_comment}{HTML}{6a737d}
+% Джинсовый синий -- Зелёно-синий Крайола
+\definecolor{my_string}{HTML}{005cc5}
+
 \definecolor{dkgreen}{rgb}{0,0.6,0}
 \definecolor{gray}{rgb}{0.5,0.5,0.5}
 \definecolor{mauve}{rgb}{0.58,0,0.82}
@@ -20,9 +27,13 @@
     showspaces=false, % показывать пробелы
     title=Листинг: \lstname, % показывать название
     showstringspaces=true, % показывать пробелы в строках
-    keywordstyle=\color{blue}, % Стиль ключевых слов
-    commentstyle=\color{dkgreen}, % Стиль комментариев
-    stringstyle=\color{mauve} % Стиль литералов  
+    % Стиль ключевых слов: int, char, void, while, else
+    keywordstyle=\color{my_keyword}\ttfamily\bfseries,
+    % Стиль комментариев: // комментарий
+    commentstyle=\color{my_comment}\ttfamily\itshape,
+    % Стиль литералов: строка в printf("строка");
+    stringstyle=\color{my_string},
+    basicstyle=\ttfamily\scriptsize, % Шрифт для отображения кода
 }
 
 % Псевдо код (в tex файле) - - - - - - - - - -
