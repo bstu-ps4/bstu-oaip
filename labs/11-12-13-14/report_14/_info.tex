@@ -1,0 +1,72 @@
+\subsection{Что входит в модуль}
+
+\begin{itemize}
+    \item *.c - файл с исходным кодом на Си. Содержит функцию.
+    
+\begin{lstlisting}[language=C, numbers=none, caption=primer.c]
+#include "HelloWorld.h"
+
+void HelloWorld()
+{
+    printf("Hello, World!\n");
+}
+\end{lstlisting}
+
+    \item *.h - заголовочный файл. Содержит:
+    \begin{itemize}
+
+        \item запрет вопторного потключения
+
+\begin{lstlisting}[language=C, numbers=none, caption=primer.c]
+#ifndef _INT_HEAP_SORT_H_
+    #define _INT_HEAP_SORT_H_
+
+    //Содержимое заголовочного файла    
+#endif
+\end{lstlisting}
+
+        \item объявление стандартных библиотек 
+    
+\begin{lstlisting}[language=C, numbers=none, caption=primer.h]
+#include <stdlib.h>
+\end{lstlisting}
+
+        \item объявления локальный библиотек
+
+\begin{lstlisting}[language=C, numbers=none, caption=*.h]
+#include "int_swap/int_swap.h"
+\end{lstlisting}
+
+        \item прототипы функций
+
+\begin{lstlisting}[language=C, numbers=none, caption=primer.h]
+struct Node* create_int_node(struct Node*, int);
+\end{lstlisting}
+
+        \item структуры
+
+\begin{lstlisting}[language=C, numbers=none, caption=primer.h]
+struct Node*
+{
+    struct Node* next;
+    int data;
+};
+\end{lstlisting}
+
+    \end{itemize}
+    \item *.tex - файл для верстки на Latex
+    \item *.dwawio - файл, который содержит блоксхему функции
+    \item *.png - блоксхема в виде картинки
+\end{itemize}
+
+\subsection{Принятая структура проекта}
+\input{../_tree.tex}
+
+\subsection{Сборка модулей}
+
+Для сборки используем Makefile. В терминал вводим команду "make", которая исходные файлы *.с скомпилирует в объектные, после чего соберёт объектные файлы в исходный файл zzz\_pear\_test, который можем запустить командой "./zzz\_pear\_test".
+
+\lstinputlisting[
+    language=make,
+    name=Makefile
+]{../13/Makefile}

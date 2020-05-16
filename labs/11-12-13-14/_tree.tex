@@ -1,0 +1,169 @@
+{
+
+\scriptsize
+
+\begin{verbatim}
+.
+├── Makefile
+├── data.bin
+├── data.tsv
+├── indices.txt
+└── src
+    ├── lab
+    │   ├── lab.c
+    │   ├── lab.drawio
+    │   ├── lab.h
+    │   ├── lab.png
+    │   ├── lab.tex
+    │   └── menu
+    │       ├── del_data
+    │       │   ├── del_data.c
+    │       │   ├── del_data.drawio
+    │       │   ├── del_data.h
+    │       │   ├── del_data.png
+    │       │   └── del_data.tex
+    │       ├── input_data
+    │       │   ├── input_data.c
+    │       │   ├── input_data.drawio
+    │       │   ├── input_data.h
+    │       │   ├── input_data.png
+    │       │   ├── input_data.tex
+    │       │   ├── input_mark
+    │       │   │   ├── input_mark.c
+    │       │   │   ├── input_mark.drawio
+    │       │   │   ├── input_mark.h
+    │       │   │   ├── input_mark.png
+    │       │   │   └── input_mark.tex
+    │       │   ├── input_number
+    │       │   │   ├── input_number.c
+    │       │   │   ├── input_number.drawio
+    │       │   │   ├── input_number.h
+    │       │   │   ├── input_number.png
+    │       │   │   └── input_number.tex
+    │       │   ├── input_osmotr
+    │       │   │   ├── input_osmotr.c
+    │       │   │   ├── input_osmotr.drawio
+    │       │   │   ├── input_osmotr.h
+    │       │   │   ├── input_osmotr.png
+    │       │   │   └── input_osmotr.tex
+    │       │   └── input_surname
+    │       │       ├── input_surname.c
+    │       │       ├── input_surname.drawio
+    │       │       ├── input_surname.h
+    │       │       ├── input_surname.png
+    │       │       └── input_surname.tex
+    │       ├── menu.c
+    │       ├── menu.drawio
+    │       ├── menu.h
+    │       ├── menu.png
+    │       ├── menu.tex
+    │       ├── open_file
+    │       │   ├── get_file_pointer
+    │       │   │   ├── get_file_pointer.c
+    │       │   │   ├── get_file_pointer.drawio
+    │       │   │   ├── get_file_pointer.h
+    │       │   │   ├── get_file_pointer.png
+    │       │   │   └── get_file_pointer.tex
+    │       │   ├── if_file_not_founded
+    │       │   │   ├── if_file_not_founded.c
+    │       │   │   ├── if_file_not_founded.drawio
+    │       │   │   ├── if_file_not_founded.h
+    │       │   │   ├── if_file_not_founded.png
+    │       │   │   └── if_file_not_founded.tex
+    │       │   ├── open_file.c
+    │       │   ├── open_file.h
+    │       │   └── open_file.tex
+    │       ├── out_data
+    │       │   ├── out_data.c
+    │       │   ├── out_data.drawio
+    │       │   ├── out_data.h
+    │       │   ├── out_data.png
+    │       │   ├── out_data.tex
+    │       │   └── write_table
+    │       │       ├── write_table.c
+    │       │       ├── write_table.drawio
+    │       │       ├── write_table.h
+    │       │       ├── write_table.png
+    │       │       └── write_table.tex
+    │       ├── save_as
+    │       │   ├── file_out_data
+    │       │   │   ├── file_out_data.c
+    │       │   │   ├── file_out_data.drawio
+    │       │   │   ├── file_out_data.h
+    │       │   │   ├── file_out_data.png
+    │       │   │   └── file_out_data.tex
+    │       │   ├── save_as.c
+    │       │   ├── save_as.drawio
+    │       │   ├── save_as.h
+    │       │   ├── save_as.png
+    │       │   └── save_as.tex
+    │       └── sort_data
+    │           ├── mark_field_sort
+    │           │   ├── mark_field_sort.c
+    │           │   ├── mark_field_sort.drawio
+    │           │   ├── mark_field_sort.h
+    │           │   ├── mark_field_sort.png
+    │           │   └── mark_field_sort.tex
+    │           ├── number_field_sort
+    │           │   ├── number_field_sort.c
+    │           │   ├── number_field_sort.drawio
+    │           │   ├── number_field_sort.h
+    │           │   ├── number_field_sort.png
+    │           │   ├── number_field_sort.tex
+    │           │   └── numder_field_sort.o
+    │           ├── osmotr_field_sort
+    │           │   ├── osmotr_field_sort.c
+    │           │   ├── osmotr_field_sort.drawio
+    │           │   ├── osmotr_field_sort.h
+    │           │   ├── osmotr_field_sort.png
+    │           │   └── osmotr_field_sort.tex
+    │           ├── sort_data.c
+    │           ├── sort_data.drawio
+    │           ├── sort_data.h
+    │           ├── sort_data.png
+    │           ├── sort_data.tex
+    │           └── surname_field_sort
+    │               ├── surname_field_sort.c
+    │               ├── surname_field_sort.drawio
+    │               ├── surname_field_sort.h
+    │               ├── surname_field_sort.png
+    │               └── surname_field_sort.tex
+    ├── main.c
+    ├── main.drawio
+    ├── main.h
+    ├── main.png
+    ├── main.tex
+    └── my_libs
+        ├── clearConsole
+        │   ├── clearConsole.c
+        │   ├── clearConsole.drawio
+        │   ├── clearConsole.h
+        │   ├── clearConsole.png
+        │   └── clearConsole.tex
+        ├── encoding
+        │   ├── encoding.c
+        │   ├── encoding.drawio
+        │   ├── encoding.h
+        │   ├── encoding.png
+        │   └── encoding.tex
+        ├── getch
+        │   ├── getch.c
+        │   ├── getch.h
+        │   └── getch.tex
+        ├── int_swap
+        │   ├── int_swap.c
+        │   ├── int_swap.drawio
+        │   ├── int_swap.h
+        │   ├── int_swap.png
+        │   └── int_swap.tex
+        └── pause_console
+            ├── pause_console.c
+            ├── pause_console.drawio
+            ├── pause_console.h
+            ├── pause_console.png
+            └── pause_console.tex
+
+27 directories, 131 files
+\end{verbatim}
+
+}

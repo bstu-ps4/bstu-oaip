@@ -1,0 +1,85 @@
+\documentclass[12pt, a4paper]{article}
+
+%<<<===Переменные для титульного листа
+\newcommand{\kafedra}{ИИТ} % Кафедра X
+
+\newcommand{\numberOfLab}{14} % Лабораторная работа №X
+\newcommand{\semestr}{2} % За X семестр
+\newcommand{\distiplina}{ОАиП} % По дисциплине <<X>>
+\newcommand{\labTitle}{Модульное программирование} % Тема: <<X>>
+
+% Выполнил
+\newcommand{\kurs}{1} % Студент X курса
+\newcommand{\group}{ПО-4 (1)} % группы X
+\newcommand{\labAuthor}{Галанин П. И.} % X
+
+% Проверил
+\newcommand{\teacherStatus}{ст. преподаватель} % X
+\newcommand{\teacher}{Хацкевич М. В.} % X
+
+\newcommand{\labDate}{Брест, 2020} % X
+%===>>>
+
+%<<<===Стили
+\usepackage{../../../sty/encoding} % кодировка
+\usepackage{../../../sty/titlePage} % титульный лист
+\usepackage{../../../sty/fields} % поля
+\usepackage{../../../sty/imgs} % картинки
+\usepackage{../../../sty/code} % исходный код
+\usepackage{../../../sty/labData} % для лабораторной
+%===>>>
+
+\begin{document}
+
+%<<<===Титульный лист
+\maketitle
+\setcounter{page}{2}
+%===>>>
+
+%<<<===Содержание
+\renewcommand{\contentsname}{Содержание}
+\tableofcontents
+\newpage
+%===>>>
+
+%<<<===Тема ЛР
+\labheading
+%===>>>
+
+%<<<===Цель
+\labgoal{Изучить принципы модульного программирования в Си, ознакомиться с основными возможностями межмодульного взаимодействия.}
+%===>>>
+
+%<<<===Ход Работы
+\labreport
+%===>>>
+
+%<<<===Условие
+\section{Условие}
+%\input{_condition.tex}
+%===>>>
+
+%<<<===Исполняемая программа
+\section{Информация}
+\input{_info.tex}
+%===>>>
+
+%<<<===Вывод ЛР
+\labconclusion{Изучили принципы модульного программирования в Си.}
+%===>>>
+
+%<<<===Литература
+\newpage
+\begin{thebibliography}{3}
+    \bibitem{}
+    БрГТУ.ПОИТ. Лабораторная работа "Модульное программирование"
+\end{thebibliography}
+
+\textbf{Ссылки}
+\begin{itemize}
+    \item Репозиторий с исходным кодом\\
+    https://github.com/bstu-ps4/BSTU-OAiP
+\end{itemize}
+%===>>>
+
+\end{document}
