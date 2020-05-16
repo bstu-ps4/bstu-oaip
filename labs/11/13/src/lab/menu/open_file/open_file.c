@@ -89,6 +89,13 @@ void open_file(int ID, struct structure_for_car *cars_data)
         free(str);
         fclose(file_pointer);
 
+        FILE *file_indices_pointer = fopen("indices.txt", "w");
+        for (int i = 0; i < ID; i++)
+        {
+            fprintf(file_indices_pointer, "%d\n", i);
+        }
+        fclose(file_indices_pointer);
+
         pause_console();
         menu(ID + 1, cars_data); //ID + 1, так как вывод файлов от i = 0 до i < ID
     }
