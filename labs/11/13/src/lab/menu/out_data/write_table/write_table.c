@@ -22,7 +22,6 @@ void write_table(int ID, struct structure_for_car *cars_data, int iterations, in
     }
     else
     {
-
         print_sep();
         printf("ID  ");
         print_sep();
