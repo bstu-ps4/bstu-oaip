@@ -4,6 +4,7 @@
 
 \begin{verbatim}
 .
+├── Makefile
 └── src
     ├── lab
     │   └── menu
@@ -14,22 +15,25 @@
     │       │   ├── input_osmotr
     │       │   └── input_surname
     │       ├── open_file
+    │       │   ├── get_file_pointer
+    │       │   └── if_file_not_founded
     │       ├── out_data
+    │       │   └── write_table
     │       ├── save_as
     │       │   └── file_out_data
     │       └── sort_data
-    │           ├── get_sorted_array
-    │           │   ├── sort_data_by_mark_field
-    │           │   ├── sort_data_by_surname_field
-    │           │   └── sort_data_in_number_field
-    │           └── sort_data_by_osmotr_field
+    │           ├── mark_field_sort
+    │           ├── number_field_sort
+    │           ├── osmotr_field_sort
+    │           └── surname_field_sort
     └── my_libs
         ├── clearConsole
         ├── encoding
         ├── getch
+        ├── int_swap
         └── pause_console
 
-24 directories
+27 directories
 \end{verbatim}
 
 }
