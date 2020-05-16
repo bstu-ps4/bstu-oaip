@@ -13,5 +13,9 @@ void input_data(int ID, struct structure_for_car* cars_data)
     getch();
     input_osmotr(ID, cars_data);
 
+    FILE* file_pointer = fopen("indices.txt", "at");
+    fprintf(file_pointer, "%d\n", ID - 1);
+    fclose(file_pointer);
+
     menu(ID, cars_data);
 }
