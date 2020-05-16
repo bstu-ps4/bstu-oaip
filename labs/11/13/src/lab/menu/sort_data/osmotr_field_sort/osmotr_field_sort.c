@@ -8,9 +8,7 @@ void osmotr_field_sort(int ID, struct structure_for_car* cars_data, int* indices
         {
             if (cars_data[indices_array[j]].osmotr < cars_data[indices_array[i]].osmotr)
             {
-                int temp = indices_array[i];
-                indices_array[i] = indices_array[j];
-                indices_array[j] = temp;
+                int_swap(&indices_array[i], &indices_array[j]);
             }
         }
     }
