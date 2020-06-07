@@ -1,17 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-
-struct Node
-{
-    struct Node* next; //указатель на следующее поле. Получаем паровозик
-    int data;
-};
-
-int get_list_size(struct Node* node);
-struct Node* add_element_to_node(int element, struct Node* node);
-void print_list(struct Node* node);
-struct Node* delete_element_on_node(struct Node* node);
-struct Node* clear_list(struct Node* node);
+#include "main.h"
 
 int main()
 {
@@ -137,79 +124,4 @@ int main()
     print_list(queue2);
 
     return 0;
-}
-
-int get_list_size(struct Node* node)
-{
-    if (node == NULL) //если список пуст, то
-    {
-        return -1;
-    }
-    else //иначе
-    {
-        int i = 0; //счётчик начинается с 0
-        struct Node* temp = node; //указатель на начала списка
-        while(temp != NULL) //пока не дошли до конца списка
-        {
-            temp = temp->next; //переходи в следующуюю ветку
-            i++; //увеличивай счётчик
-        }
-        return i;
-    }
-}
-
-struct Node* add_element_to_node(int element, struct Node* node)
-{
-    struct Node* newNode = (struct Node*) malloc(sizeof(struct Node));//выделили память под новый узел
-    newNode->next = node; //в новый узел в поле next леждит старый узел
-    newNode->data = element; //в новый узел добавили элемент
-    return newNode; //возвратили новый список
-}
-
-void print_list(struct Node* node)
-{
-    if (node != NULL) //если не список пуст
-    {
-        for (struct Node* temp = node; temp != NULL;)
-        {
-            printf(" > %d", temp->data); //выводим элемент
-            temp = temp->next; //переходим по следующим веткам
-        }  
-    }
-    printf(" > NULL\n\n");
-}
-
-struct Node* delete_element_on_node(struct Node* node)
-{
-    if (node == NULL)//если список пуст, то
-    {
-        printf("\nНет чего удалять!\n\n");
-        return NULL;
-    }
-    else //иначе
-    {
-        struct Node* newNode = node->next;//перешли в следующий узел
-        free(node); //предыдущий узел удалии
-        return newNode; //возвратили новый список
-    }
-}
-
-struct Node* clear_list(struct Node* node)
-{
-    if (node == NULL) //если список пуст, то
-    {
-        printf("Список уже очищен - нет чего очищать\n\n");
-    }
-    else //иначе
-    {
-        for (struct Node* temp = node; temp != NULL;)
-        {
-            temp = node->next; //переходим в следующий узел
-            free(node); //предыдущий узел очищаем
-            node = temp;
-        }
-        printf("Список был очищен\n\n");
-    }
-
-    return node;
 }
