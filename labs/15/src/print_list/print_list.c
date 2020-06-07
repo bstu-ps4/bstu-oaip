@@ -10,5 +10,5 @@ void print_list(struct Node* node)
             temp = temp->next; //переходим по следующим веткам
         }  
     }
-    printf(" > NULL\n\n");
+    printf(" > NULL\n");
 }

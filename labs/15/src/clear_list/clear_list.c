@@ -4,7 +4,7 @@ struct Node* clear_list(struct Node* node)
 {
     if (node == NULL) //если список пуст, то
     {
-        printf("Список уже очищен - нет чего очищать\n\n");
+        //printf("Список уже очищен - нет чего очищать\n\n");
     }
     else //иначе
     {
@@ -14,7 +14,7 @@ struct Node* clear_list(struct Node* node)
             free(node); //предыдущий узел очищаем
             node = temp;
         }
-        printf("Список был очищен\n\n");
+        //printf("Список был очищен\n\n");
     }
 
     return node;
